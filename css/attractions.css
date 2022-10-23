@@ -1,0 +1,179 @@
+/* Video container*/
+/*placing the video at center and defining its width to be 70% of viewports width*/
+.vd_container{
+    margin: 1rem auto;
+    width: 70vw;
+}
+.vd_container video{
+    width: 100%;
+}
+
+
+/* SLIDESHOW using Animation and Transform Property, NO JavaScript */
+/*---------------------------------------------------------------------*/
+
+/* setting up container for images used in slideshow with overflow hidden
+so that only one image is visible at a time */
+.slideshow{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+/* making container of slideshow images to cover 100% width 
+of slideshow container, changing display to flex so that images
+are arranged as flex items and adding animation of 18s long
+looping for ever */
+.slideshow_img_div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: slideshow 18s linear infinite;
+    display: flex;
+}
+
+/*setting each slide in way that relative distance between them is 960px, 
+they are stacked over each other with last slide being at the bottom of the stack
+and setting after how much time the animation starts for each slide*/
+.slide1{
+    transform: translate(100%);
+    z-index: 6;
+    animation-delay: 0s;
+}
+
+.slide2{
+    transform: translate(100%);
+    z-index: 5;
+    animation-delay: 3s;
+}
+
+.slide3{
+    transform: translate(100%);
+    z-index: 4;
+    animation-delay: 6s;
+}
+
+.slide4{
+    transform: translate(100%);
+    z-index: 3;
+    animation-delay: 9s;
+}
+
+.slide5{
+    transform: translate(100%);
+    z-index: 2;
+    animation-delay: 12s;
+}
+
+.slide6{
+    transform: translate(100%);
+    z-index: 1;
+    animation-delay: 15s;
+}
+
+
+/* making image to cover 100% width of the slideshow_img_div */
+.slideshow_img_div img{
+    width: 100%;
+}
+
+/* adding keyframe rule to control the intermediate steps of the 
+slideshow by using transform property with translate value for
+changing abscissa */
+@keyframes slideshow{
+    0%{
+        transform: translate(0%);
+    }
+    25%{
+        transform: translate(0%);
+    }
+    30%{
+        transform: translate(-100%);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+}
+
+/*-----------------------------------------------------------------------------*/
+/*styling the p tags which are the part of description of different attractions*/
+p{
+    font-family: "EB Garamond",Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    color: rgba(0, 0, 0,1);
+}
+
+/*-----------------------------------------------------------------------------*/
+/* setting quote background to an image*/
+.quote_background{
+    width: 100%;
+    background-image: url(../images/quote_background.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 2rem 0;
+}
+
+/* Positioning the Ending message */
+.ending_message{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Styling Blockquote */
+blockquote{
+    font-family: "Charm",Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+}
+
+/* Styling the Book Your Day link to the form of button */
+#book_your_day {
+    display: inline-block;
+    padding: 0.5rem;
+    text-decoration: none;
+    background-color: #0d0dc5;
+    color: #ffffff;
+    border: 1px solid #0000ff;
+    border-radius: 0.2rem;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+/*setting the background color, box-type and dimensions of description box of different attractions and hotels*/
+.description{
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    height: 21rem;
+    padding: 0.7rem;
+  }
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/* Lyout for Tiled articles */
+
+/*setting dimensions of each attraction article*/
+.tiled_article {
+    display: block;
+    width: 90%;
+    margin: 50px 5%;
+    height: 300px;
+    border: 1px solid white;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px #888;
+}
+
+/*moving slideshow to left and right for alternate attractions*/
+.tiled_article_odd .slideshow {
+    float: left;
+}
+
+.tiled_article_even .slideshow {
+    float: right;
+}
+
+/*setting overflow to auto just in case description of any attraction becomes wider than the dimension set for the container*/
+.tiled_article .description {
+    overflow: auto;
+    height: 100%;
+    display: block;
+}

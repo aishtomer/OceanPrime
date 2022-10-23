@@ -1,0 +1,631 @@
+/*importing external fonts: Google fonts*/
+@import url(https://fonts.googleapis.com/css2?family=Charm:wght@700&family=EB+Garamond&family=Montserrat:wght@900&family=Pattaya&family=Playfair+Display:wght@600&display=swap);
+
+
+/*---------------------------------------------------------------------------------*/
+/* Layout CSS */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*setting the position and dimensions of site header*/
+#site_header {
+    position: relative;
+    margin-top: 0;
+    height: 120px;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+/*setting the postion of opening hours banner so that it gets displayed on top-right corner of the page*/
+#opening_hrs_banner {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+/*aligning the primary navigation bar at the center of the container for it*/
+#navigation_bar {
+    text-align: center;
+    position: relative;
+}
+
+/*making the options on primary navigation bar to be displayed in line*/
+#navigation_bar ul {
+    display: inline;
+}
+
+/*setting the list style of unordered list item to be none to hide bullets and changing display property so that option get displayed in same line*/
+#navigation_bar ul li {
+    list-style: none;
+    display: inline;
+
+}
+
+/*---------------------------------------------------------------------------------*/
+/*HEADER Styling*/
+#site_header {
+  background-color: rgba(255,255,255,1);
+}
+
+/*setting the dimensions of theme park logo image*/
+#logo img{
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 140px;
+    height: 140px;
+}
+
+/*setting the dimensions and type of box of div block containing Theme Park Name with a Tagline*/
+#park_name_with_tagline{
+    display: inline-block;
+    height: 5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+/*styling the Theme Park Name and making it to display at the center of containing div block*/
+h1{
+    text-align: center;
+    font-family: "Playfair Display",'Times New Roman', Times, serif;
+    font-size: 4rem;
+    color: rgb(0, 102, 128);
+    text-shadow: rgb(133, 193, 233) 0px 5px 5px;
+}
+
+/*styling the tagline which is displayed at the bottom of the theme park name and making it to display at the center of containing div block*/
+header h2{
+    text-align: center;
+    font-family: "Playfair Display",'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color: rgb(5, 78, 97);
+    margin: auto;
+}
+
+/*styling the opening hrs banner which will be displayed on 
+top-right corner of the page*/
+#opening_hrs_banner{
+    height: 3rem;
+    border: 0.1rem solid rgba(255, 153, 0,1);
+    border-top: none;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: rgba(240, 230, 140,1);
+    padding: 1rem 0.25rem;
+    display: inline-block;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    max-width: 135px;
+}
+
+/*setting the elements inside the opening hrs banner to be block elements*/
+#opening_hrs_banner span, #opening_hrs_banner a{
+    display: block;
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------------*/
+/* NAVIGATION BAR Styling */
+
+/* setting font family and background colour for navigation bar */
+nav{
+    margin-top: 0px;
+    font-family:  Helvetica, Arial, sans-serif;
+    background-color: rgba(77, 219, 255,1);
+}
+
+/* Styling links present in the primary navigation bar in normal state(not hovered)*/
+.main_nav_anchor{
+    background-color: rgba(77, 219, 255,1);
+    color: rgba(0,0,0,1);
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+/* changing the background color when primary navigation links are hovered */
+.main_nav_anchor:hover {
+    background-color: rgba(153, 227, 245,0.9);
+    color: #000000;
+}
+
+/*setting the size of image that accompanies the secondary navigation bar*/
+.sec_nav_img{
+  width: 200px;
+}
+
+/* displaying all the primary links as a single unit */
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+/*setting the display and position of content that will show when liks on primary navigation bar are hovered*/
+.dropable{
+    position: relative;     /*relative so that container is placed below the hovered link */
+    display: inline-block;
+}
+
+/*hidding the content of dropable block until the link in pri. nav bar is hovered */
+.dropped_content{
+    display: none;
+    position: absolute;
+    left: -160px;
+    background-color: rgba(153, 227, 245, 1);
+    min-width: 160px;
+    z-index: 8;
+}
+
+/*making the content inside the dropped content container to turn its child elements into flex items so that they are displayed as a single unit*/
+.flex_display_content{
+    display: flex;
+}
+
+/*resizing the image which is part of content displayed when link in pri. nav bar is hovered*/
+.flex_display_content img{
+    margin: 1rem;
+    width: 16rem;
+    height:17rem ;
+}
+
+/*styling the links which are part of content displayed when link in pri. nav bar is hovered*/
+.dropped_links a{
+    color: rgba(0, 61, 77,1);
+    text-decoration: none;
+    display: block;
+    min-width: 10rem;
+    padding: 1rem;
+}
+
+/*styling the links(in hover state) which are part of content displayed when link in pri. nav bar is hovered*/
+.dropped_content a:hover{
+    background-color: rgba(58, 121, 137,1);
+    color: rgba(255, 245, 238,1);
+}
+
+/*displaying content when link in pri. nav bar is hovered*/
+.dropable:hover .dropped_content{
+    display: block;
+    margin: 0 auto;
+}
+
+/*Changing the appearance of link in pri. nav bar when its hidden dropdown content is displayed*/
+.dropable:hover .main_nav_anchor{
+    background-color: rgba(153, 227, 245, 1);
+    color: #000000;
+}
+
+/* Styling the book tickets link which is the part of pri. nav bar*/
+#book_tickets_btn{
+    display: inline;
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    border: 0.1rem solid rgba(255,255,255,1);
+    border-radius: 0.4rem;
+    padding: 0.4rem ;
+    background-color: rgb(216, 6, 6);
+    color:rgba(255,255,255,1);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/*Styling to represent current active tab(that is indicate which page is currently open) */
+.current_open{
+    background-color: rgba(0, 122, 153,1);
+    color: rgba(255,255,255,1);
+    border-bottom-left-radius:0.5rem ;
+    border-bottom-right-radius: 0.5rem;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/*Styling the level-2 heading for all pages*/
+h3{
+    margin: 1rem;
+    font-family: 'Pattaya',Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+/*Styling the level-3 heading for all pages*/
+h4{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    color: rgba(0, 128, 128,1);
+}
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*Footer Styling*/
+ 
+/*changing font related properties for all the headings in the footer of all pages*/
+footer h4, footer h5 {
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  font-size: 1.1rem;
+}
+
+/*setting margin on footer to make it separate from rest of the content above it*/
+footer {
+    margin-top: 30px;
+}
+
+/*applying appearance CSS on the footer*/
+footer .footer_navigation {
+    background-color: white;
+    opacity: 0.85;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+/*changing font related properties for all links in the footer of all pages*/
+footer li {
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  list-style-type: none;
+}
+
+/*changing font related properties and margin for the copyright notice in the footer of all pages*/
+footer .copyright_notice {
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  font-size: 0.9rem;
+  margin: 10px 0 0 15px;
+}
+
+/*changing some layout related properties for unordered list of links that appear in the footer */
+footer ul {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 3px;
+  padding: 5px;
+  max-width: 200px;
+}
+
+/*styling links present in footer*/
+footer ul a {
+  text-decoration: none;
+  color: black;
+}
+
+/*setting margin to heading of each unordered list of the links so that they align properly with their corresponding list of links*/
+footer ul h4, footer ul h5 {
+  margin: 0 5px;
+}
+
+/*styling subscribe button in the footer*/
+#subscribe_button{
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0.5rem 0rem;
+  display: block;
+  border: 1px solid #9C0000;
+  border-radius: 5px;
+  padding: 0.3rem;
+  color: #ffffff;
+  background-color: #9C0000;
+}
+
+.sign_up_area span{
+  display: block;
+  width: 15rem;
+  margin-top: 1rem;
+}
+
+form input{
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*Laying out content of the footer by using grid layout*/
+
+footer .footer_navigation {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+      'attractions plan_your_visit contact_us sign_up'
+      'attractions plan_your_visit location sign_up';
+}
+
+footer .attractions_list {
+    grid-area: attractions;
+}
+
+footer .plan_your_visit_list {
+    grid-area: plan_your_visit;
+}
+
+footer .contact_us_list {
+    grid-area: contact_us;
+}
+
+footer .sign_up_area {
+    grid-area: sign_up;
+}
+
+footer .theme_park_location_list {
+    grid-area: location;
+}
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* BUBBLE BACKGROUND ANIMATION AND BACKGROUND GRADIENT*/
+
+/*setting the height of <html>,<body>,bubbles container to have the height of the whole page*/
+html,body,.bub_bgnd{
+    min-height: 100%;
+  }
+
+/*setting a multicolored linear gradient to span whole body of the page*/
+body{
+  background: linear-gradient(#ffffff,rgba(0, 0, 255,0.4),#ffffff);
+}
+
+/* placing bubbles container behind all other elements on the page*/
+.bub_bgnd{
+  z-index: -1;
+}
+
+/*styling the div elements with class bubble to make them circular and small*/
+.bubble{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: -2;
+  position: fixed;
+  transform: scale(0.2);
+}
+
+/*Setting different coloured gradients for bubbles*/
+.B_orange{
+  background:radial-gradient(rgba(255, 255, 255,0.1),rgba(255, 165, 0,0.2),rgba(255, 0, 0,0.3));
+  box-shadow: 5px 5px 5px rgba(255, 69, 0,0.5),inset 5px 5px 5px rgba(255, 69, 0,0.5);
+}
+
+.B_blue{
+  background:radial-gradient(rgba(255, 255, 255,0.1),rgba(135, 206, 235,0.2),rgba(0, 0, 255,0.3));
+  box-shadow: 5px 5px 5px rgba(0, 0, 255,0.5),inset 5px 5px 5px rgba(0, 0, 255,0.5);
+}
+
+.B_green{
+  background:radial-gradient(rgba(255, 255, 255,0.1),rgba(124, 252, 0,0.2),rgba(0, 128, 0,0.3));
+  box-shadow: 5px 5px 5px rgba(0, 128, 0,0.5),inset 5px 5px 5px rgba(0, 128, 0,0.5);
+}
+
+.B_pink{
+  background:radial-gradient(rgba(255, 255, 255,0.1),rgba(255, 192, 203,0.2),rgba(255, 105, 180,0.3));
+  box-shadow: 5px 5px 5px rgba(255, 105, 180,0.5),inset 5px 5px 5px rgba(255, 105, 180,0.5);
+}
+
+.B_violet{
+  background:radial-gradient(rgba(255, 255, 255,0.1),rgba(238, 130, 238,0.2),rgba(102, 51, 153,0.3));
+  box-shadow: 5px 5px 5px rgba(128, 0, 128,0.5),inset 5px 5px 5px rgba(128, 0, 128,0.5);
+}
+  
+/*declaring keyframes for animation named "upwards" so that bubbles move upward*/
+@keyframes upwards{
+  0%{
+    top: 100%;
+  }
+
+  100%{
+    top: -100%;
+  }
+}
+
+
+/*declaring keyframes for animation named "oscillate", so that as bubbles move upward they also do a periodic motion in horizontal
+direction*/
+  @keyframes oscillate{
+    0%{
+      margin-left: 0px;
+    }
+    100%{
+      margin-left: 45px;
+    }
+    
+  }
+
+/* setting different duration for both animations for each bubble*/
+  .bubble1{
+    animation: oscillate 1s ease-in-out infinite alternate, upwards 12s linear infinite;
+    left: 0%;
+    top: 0%;
+    
+  }
+  
+  .bubble2{
+    animation: oscillate 2.5s ease-in-out infinite alternate, upwards 15s linear infinite;
+    left:20% ;
+    top: 0%;
+  }
+
+  .bubble3{
+    animation: oscillate 1.5s ease-in-out infinite alternate, upwards 8s linear infinite;
+    left: 40%;
+    top: 60%;
+  }
+
+  .bubble4{
+    animation: oscillate 3s ease-in-out infinite alternate, upwards 8s linear infinite;
+    left:60% ;
+    top: 50%;
+  }
+
+  .bubble5{
+    animation: oscillate 1.5s ease-in-out infinite alternate, upwards 13s linear infinite;
+    left: 20%;
+    top: 10%;
+  }
+
+  .bubble6{
+    animation: oscillate 2s ease-in-out infinite alternate, upwards 17s linear infinite;
+    left: 0% ;
+    top: 90%;
+  }
+
+  .bubble7{
+    animation: oscillate 3.5s ease-in-out infinite alternate, upwards 21s linear infinite;
+    left: 20%;
+    top: 30%;
+  }
+
+  .bubble8{
+    animation: oscillate 1.8s ease-in-out infinite alternate, upwards 15s linear infinite;
+    left:40% ;
+    top: 77%;
+  }
+
+  .bubble9{
+    animation: oscillate 3.2s ease-in-out infinite alternate, upwards 8s linear infinite;
+    left:60% ;
+    top: 68%;
+  }
+
+  .bubble10{
+    animation: oscillate 2s ease-in-out infinite alternate, upwards 23s linear infinite;
+    left:80% ;
+    top: 29%;
+  }
+
+  .bubble11{
+    animation: oscillate 4s ease-in-out infinite alternate, upwards 27s linear infinite;
+    left:0% ;
+    top: 44%;
+  }
+
+  .bubble12{
+    animation: oscillate 2.7s ease-in-out infinite alternate, upwards 9s linear infinite;
+    left:20% ;
+    top: 62%;
+  }
+
+  .bubble13{
+    animation: oscillate 1.9s ease-in-out infinite alternate, upwards 10s linear infinite;
+    left: 40%;
+    top: 78%;
+  }
+
+  .bubble14{
+    animation: oscillate 1.2s ease-in-out infinite alternate, upwards 10s linear infinite;
+    left:60% ;
+    top: 42%;
+  }
+
+  .bubble15{
+    animation: oscillate 3.4s ease-in-out infinite alternate, upwards 22s linear infinite;
+    left:80% ;
+    top: 98%;
+  }
+
+  .bubble16{
+    animation: oscillate 2.7s ease-in-out infinite alternate, upwards 7s linear infinite;
+    left:-10% ;
+    top: 15%;
+  }
+
+  .bubble17{
+    animation: oscillate 2.12s ease-in-out infinite alternate, upwards 11s linear infinite;
+    left:0% ;
+    top: 87%;
+  }
+  .bubble18{
+    animation: oscillate 1.75s ease-in-out infinite alternate, upwards 25s linear infinite;
+    left:20% ;
+    top: 72%;
+  }
+
+  .bubble19{
+    animation: oscillate 2.25s ease-in-out infinite alternate, upwards 10s linear infinite;
+    left: 80%;
+    top: 12%;
+  }
+  .bubble20{
+    animation: oscillate 3s ease-in-out infinite alternate, upwards 15s linear infinite;
+    left:50% ;
+    top: 30%;
+  }
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Repeating Border below footer */
+/*setting the dimensions and adding background image to div block at the bottom of the page inside foooter*/
+.repeat_border{
+  width: 100%;
+  height: 275px;
+  background-image: url(../images/marine-border.png);
+  background-repeat: repeat-x;
+  background-size: 900px 300px;
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/*following media rule will be used to rearrange content of the page, when screen size is less than or equal to 700px*/
+@media screen and (max-width: 700px) {
+    /*making description of all the attractions to expand the width of the screen*/
+    .description {
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    /*make video to expand to the width of screen */
+    .vd_container {
+        width: 100%;
+    }
+
+    /*reducing the font-size of theme park name so that it can be easily read(without horizontal scrolling) for small screens*/
+    #park_name_with_tagline h1 {
+        font-size: 3rem;
+    }
+
+    /*reducing the size of theme park logo for small screens*/
+    #logo img {
+        width: 5rem;
+        top: -20px;
+        left: 0;
+    }
+
+    /**/
+    #opening_hrs_banner, #book_tickets_btn {
+        display: none;
+    }
+
+
+    footer .footer_navigation {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas:
+        'attractions plan_your_visit'
+        'contact_us location'
+        'sign_up sign_up';
+    }
+
+    .tiled_article .slideshow {
+        width: 400px;
+        height: 400px;
+    }
+    .tiled_article_odd .slideshow, .tiled_article_even .slideshow {
+        float: none;
+    }
+    .tiled_article {
+        max-width: 400px;
+        height: auto;
+        margin: 30px auto;
+    }
+}
+

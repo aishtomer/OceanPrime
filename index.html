@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--to display the title of page on browsers tab-->
+    <title>Ocean Prime-Home</title>
+
+    <!--Adding meta tags-->
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a website for a 'Ocean Prime' theme park.">
+    <meta name="author" content="Team-94">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="'Ocean Prime' 'Theme Park' 'Amusement Park' Holidays Ocean Park Fun">
+    
+    <!--adding favicon to the website-->
+    <link rel="shortcut icon" href="images/Ocean Prime Logo - Original - 5000x5000.ico"><!--[1]-->
+
+    <!--Importing Stylesheets to style the page-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<!--NOTE : Numbers enclosed in the square bracket in inside comment(which appears adjascent to each of the external source embedded
+        on this page), are the reference number of the embedded content in the citations list(present at the bottom of this HTMl code as a comment)-->
+
+<body>
+<!--HEADER-->
+<header id="site_header">
+        <!--Logo of Theme Park-->
+        <div id="logo">
+            <!--linking theme park logo with home page-->
+            <a href="./index.html">
+                <img src="images/logo.svg" alt="theme park logo showing a ship on water waves." title="Go to Home Page"><!--[1]-->
+            </a>
+        </div>
+        
+        <!--Theme Park Name and Slogan to be displayed at center of the header-->
+        <div id="park_name_with_tagline">
+            <h1>Ocean Prime</h1>
+            <h2>Crown of Atlantis</h2>
+        </div>
+        
+        <!--Opening Hours Banner to be displayed in top-right corner of the page-->
+        <div id="opening_hrs_banner">
+            <span>Today's opening hours</span>
+            <a href="info.html#opening_hours">View all opening times</a>
+        </div>
+</header>
+
+<!--NAVIGATION BAR-->
+<nav id="navigation_bar"> 
+    <!--adding the list of options that will be used to navigate through the website-->
+    <ul>
+        <li><a href="index.html" class="main_nav_anchor current_open">Home</a></li>
+        <!--list items with class dropable denote the options on primary navigation bar that have secondary navigation bar attached to it-->
+        <li class="dropable">
+            <a class="main_nav_anchor" href="attractions.html">Our Attractions</a>
+            <!--following div represents the content that will appear as a secondary navigation bar when above link is hovered-->
+            <div class="dropped_content">
+                <div class="flex_display_content">
+                    <div class="dropped_links">
+                        <!--links present in the secondary navigation bar-->
+                        <a href="attractions.html#rides">Rides for Everyone</a>
+                        <a href="attractions.html#festival_specials">Festival Specials</a>
+                        <a href="attractions.html#meet_ocean_friends">Meet Ocean Friends</a>
+                        <a href="attractions.html#crystal_ballet">Crystal Ballet</a>
+                        <a href="attractions.html#aquater">Aquater</a>
+                        <a href="attractions.html#ocean_galaxy">Ocean Galaxy</a>
+                    </div>
+                    <!--image accompanying the displayed seconadry navigation block-->
+                    <img src="images/animal-performance-penguin-unsplash.jpg" class="sec_nav_img" alt="an image showing 3 penguins dancing."><!--[2]-->
+                </div>
+            </div>
+        </li>
+        <!--list items with class dropable denote the options on primary navigation bar that have secondary navigation bar attached to it-->
+        <li class="dropable">
+            <a class="main_nav_anchor" href="info.html">Plan Your Visit</a>
+            <!--following div represents the content that will appear as a secondary navigation bar when above link is hovered-->
+            <div class="dropped_content">
+                <div class="flex_display_content">
+                    <div class="dropped_links">
+                        <a href="info.html#ticket_info">Book Tickets</a>
+                        <a href="info.html#opening_hours">Opening Hours</a>
+                        <a href="info.html#map">Park Map</a>
+                        <a href="info.html#places_to_stay">Places to Stay</a>
+                    </div>
+                    <!--image accompanying the displayed seconadry navigation block-->
+                    <img src="images/sec_nav_plan_visit.jpg" class="sec_nav_img" alt="an image showing entrance view of the theme park where people are moving about."><!--[3]-->
+                </div>
+            </div>
+        </li>
+    </ul>
+    <!--Book Tickets Link that will appear on the right side of the navigation bar-->
+    <a href="info.html#ticket_info" id="book_tickets_btn">Book Tickets</a>
+</nav>
+
+<main>
+    <!--SLIDESHOW implemented by using Animation property, NO Javascript-->
+    <div id="slideshow">
+        <!--following divs contain the images that will be used in slideshow-->
+        <div id="slide1" class="slideshow_img_div"><img src="images/home-slide1.jpg" alt="a group of three orcas showcasing their talent."></div><!--[4]-->
+        <div id="slide2" class="slideshow_img_div"><img src="images/home-slide2.jpg" alt="an image showing people enjoying themselves on a gaint roller coaster."></div><!--[5]-->
+        <div id="slide3" class="slideshow_img_div"><img src="images/home-slide3.jpg" alt="an image showing a group of dolphins taking a large jump over water."></div><!--[6]-->
+        <div id="slide4" class="slideshow_img_div"><img src="images/home-slide4.jpg" alt="an image of people dressed during a carnival."></div><!--[7]-->
+        <div id="slide5" class="slideshow_img_div"><img src="images/home-slide5.jpg" alt="an image showing the underwater passage of Aquater restaurant at theme park."></div><!--[8]-->
+        <div id="slide6" class="slideshow_img_div"><img src="images/home-slide6.jpg" alt="an image showing a large whale in the aquarium located in theme park."></div><!--[9]-->
+    </div>
+
+    <!--SECTION1: SPECIAL OFFERS-->
+    <section class="offers">
+        <!--section heading-->
+        <h3>Special Offers</h3>
+        <!--following div the container for all the boxes appearing under  "Special Offers" heading and is used to align all the boxes in one line-->
+        <div class="flex_offers">
+            <!--following divs denote the boxes that appear below the "Special Offers" heading and are links to their relevant section on the website-->
+            <div class="offer offer1">
+                <a href="info.html#ticket_info">Save upto $500 on a Family Package</a>
+            </div>
+
+            <div class="offer offer2">
+                <a href="info.html#ticket_info">Buy 1 and Get 2 Tickets Free</a>
+            </div>
+
+            <div class="offer offer3">
+                <a href="info.html#ticket_info">Free Parking</a>
+            </div>
+        </div>
+    </section>
+
+    <!--SECTION2: FEATURED ATTRACTIONS-->
+    <section class="attractions">
+        <!--section heading-->
+        <h3>Featured Attractions</h3>
+        <!--following div the container for all the boxes appearing under  "Featured Attractions" heading and is used to align all the boxes in one line-->
+        <div class="flex_attractions">
+            <!--each of the following divs denote the boxes that appear below the "Featured Attractions" heading and are links to their relevant section on the website-->
+            <div id="attraction_1" class="attraction">
+                <a href="./attractions.html#aquater">Aquater : The Realm of Ocean</a>
+            </div>
+
+            <div id="attraction_2" class="attraction">
+                <a href="./attractions.html#meet_ocean_friends">Meet Our Ocean Friends</a>
+            </div>
+
+            <div id="attraction_3" class="attraction">
+                <a href="./attractions.html#rides">Rides for Everyone</a>
+            </div>
+        </div>
+    </section>
+
+    <!--SECTION 3: PLACES TO STAY-->
+    <section class="places_to_stay">
+        <!--section heading-->
+        <h3>Places to stay</h3>
+        <!--following div the container for all the boxes appearing under  "Places to Stay" heading and is used to align all the boxes in one line-->
+        <div class="flex_places_to_stay" >
+            <!--each of the following divs denote the boxes that appear below the "Places to Stay" heading and are links to their relevant section on the website-->
+            <div class="place_to_stay" id="hotel1">
+                <a href="./info.html#place_to_stay_1">Ocean Valley: The Heart of The Ocean</a>
+            </div>
+
+            <div class="place_to_stay hotel_class" id="hotel2">
+                <a href="./info.html#place_to_stay_2">Aqua Diamond: The Paradise</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--FOOTER-->
+<footer class="site_footer">
+    <div class="footer_navigation">
+        <!--the list of attraction links with heading that will be part of footer-->
+        <ul class="attractions_list">
+            <!--adding the heading for the list of attractions link-->
+            <li><h4>Our Attractions</h4></li>
+            <li>
+                <!--list of links that will appear under "Our Attractions" heading in the footer-->
+                <ul>
+                    <li><a href="attractions.html#rides">Rides</a></li>
+                    <li><a href="attractions.html#festival_specials">Festival Specials</a></li>
+                    <li><a href="attractions.html#meet_ocean_friends">Meet Our Ocean Friends</a></li>
+                    <li><a href="attractions.html#crystal_ballet">Crystal Ballet</a></li>
+                    <li><a href="attractions.html#aquater">Aquater</a></li>
+                    <li><a href="attractions.html#ocean_galaxy">Ocean Galaxy</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!--the list of 'plan you visit' page links with heading that will be part of footer-->
+        <ul class="plan_your_visit_list">
+            <!--adding the heading for the list of 'plan you visit' page links-->
+            <li><h4>Plan Your Visit</h4></li>
+            <li>
+                <!--list of links that will appear under "Plan Your Visit" heading in the footer-->
+                <ul>
+                    <li><a href="./info.html#ticket_info">Book tickets</a></li>
+                    <li><a href="./info.html#opening_hours">Opening days and times</a></li>
+                    <li><a href="./info.html#map">Map of the Theme Park</a></li>
+                    <li><a href="./info.html#places_to_stay">Places to stay</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!--Contact information list appearing at the footer of the page-->
+        <ul class="contact_us_list">
+            <!--giving heading to the list containing contact information like email.-->
+            <li><h4>Contact Us</h4></li>
+            <li>
+                <!--list of links that will appear under "Contact Us" heading in the footer-->
+                <ul>
+                    <li>phone no.: <a href="tel:123457890">123457890</a></li>
+                    <li>email: <a href="mailto:someone@oceanprime.com">someone@oceanprime.com</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!--Location of Theme Park added as a list appearing as a part of footer-->
+        <ul class="theme_park_location_list">
+            <!--giving heading to the list containing location of "Ocean Prime"(theme park's name)-->
+            <li><h4>Location of Ocean Prime</h4></li>
+            <li>
+                <!--specifying location of theme park as a list-->
+                <ul>
+                    <li>8684 Ocean Street<br> Miami, Florida<br> 97204<br> USA</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!--Sign up for Newsletter invitation, present as a part of the footer-->
+        <div class="sign_up_area">
+            <!--giving heading to the invitation-->
+            <h4>Sign Up for Newsletter</h4> 
+            <!--adding text that appears under the heading "Sign Up for Newsletter"-->
+            <span>Sign up for our newsletter to get updates about our attractions, special offers and so much more.</span>
+            <!--adding a form to facilitate the user to enter his emial address if he wants to subscribe-->
+            <form action="#">
+                <input id="your_email_address" type="text" placeholder="enter your email address"> 
+                <!--adding a subscribe button, which appears as a part of the footer-->
+                <button id="subscribe_button">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Copyright notice which will be displayed below the part(with white background) of the footer-->
+    <p class="copyright_notice">&copy; 2021 Ocean Prime. All rights reserved.</p>
+
+    <!--div block to add a background image at the bottom of the footer-->
+    <div class="repeat_border"></div>
+</footer>
+
+<!--BUBBLE ANIMATION and GRADIENT that appears in the background-->
+<div class="bub_bgnd">
+    <!--each of the following div represents the box which will be styled to give the appearance of Bubble by using CSS-->
+    <div class="bubble bubble1 B_orange"></div>
+    <div class="bubble bubble2 B_blue"></div>
+    <div class="bubble bubble3 B_pink"></div>
+    <div class="bubble bubble4 B_orange"></div>
+    <div class="bubble bubble5 B_green"></div>
+    <div class="bubble bubble6 B_pink"></div>
+    <div class="bubble bubble7 B_violet"></div>
+    <div class="bubble bubble8 B_orange"></div>
+    <div class="bubble bubble9 B_blue"></div>
+    <div class="bubble bubble10 B_violet"></div>
+    <div class="bubble bubble11 B_pink"></div>
+    <div class="bubble bubble12 B_green"></div>
+    <div class="bubble bubble13 B_blue"></div>
+    <div class="bubble bubble14 B_orange"></div>
+    <div class="bubble bubble15 B_green"></div>
+    <div class="bubble bubble16 B_pink"></div>
+    <div class="bubble bubble17 B_violet"></div>
+    <div class="bubble bubble18 B_orange"></div>
+    <div class="bubble bubble19 B_blue"></div>
+    <div class="bubble bubble20 B_pink"></div>
+  </div>
+</body>
+</html>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--CITATION FOR THE IMAGES USED ON THIS PAGE-->
+<!--
+    [1]: Zarla.com,Year Published: NA,[Online],Available: https://www.zarla.com/design/wgyhw48mwq6xbj4x86bh/icon/icon [Accessed: 12-Jan-2022]
+    [2]: D.Oyen, 2019, [Online], Available: https://unsplash.com/photos/3Xd5j9-drDA [Accessed: 13-Jan-2022]
+    [3]: I. R. Ona, 2017, [Online], Available: https://unsplash.com/photos/x6QdZQkuroI [Accessed: 13-Jan-2022]
+    [4]: L. Driskill, 2021, [Online], Available:https://unsplash.com/photos/6x5VR9UiBMw [Accessed: 13-Jan-2022]
+    [5]: M. Bowden, 2018, [Online],Available: https://unsplash.com/photos/GZc4fnQsaWQ [Accessed: 14-Jan-2022]
+    [6]: R. Smith, 2020, [Online],Available: https://unsplash.com/photos/UDlXygG0pgA [Accessed: 14-Jan-2022]
+    [7]: Q. Al, 2021, [Online], Available: https://unsplash.com/photos/SDHpS6gbIDk [Accessed: 13-Jan-2022]
+    [8]: F. Galvan, 2019, [Online],Available: https://unsplash.com/photos/h4-ApEYOK5o [Accessed: 14-Jan-2022]
+    [9]: P. Xu, 2020, [Online],Available: https://unsplash.com/photos/vJZe1Z0fT1c [Accessed: 14-Jan-2022]
+-->
+<!--CITATIONS FOR THE IMAGES INSERTED AS BACKGROUND IMAGE VIA CSS-->
+<!--
+    [1]: K. Delvecchio, 2017, [Online], Available: https://unsplash.com/photos/7noZJ_4nhU8 [Accessed: 20-Jan-2022]
+    [2]: A. Li, 2020, [Online], Available: https://unsplash.com/photos/A_dJOYpxEVU [Accessed: 20-Jan-2022]
+    [3]: A. Nygard, 2020, [Online], Available: https://unsplash.com/photos/FwRTLAjTeE0 [Accessed: 20-Jan-2022]
+    [4]: A. Seth, 2019, [Online], Available:https://unsplash.com/photos/hDbCjHNdF48 [Accessed: 14-Jan-2022]
+    [5]: S. Crain, 2019, [Online], Available:https://unsplash.com/photos/8jk64drEMcw [Accessed: 13-Jan-2022]
+    [6]: J. Loiterton, 2020, [Online], Available: https://www.pexels.com/photo/people-surfing-on-sea-waves-4319752/ [Accessed: 13-Jan-2022]
+    [7]: MP, 2015, [Online],Available: https://unsplash.com/photos/fV2dM2WvKvE [Accessed: 20-Jan-2022]
+    [8]: W. Funfun, 2018, [Online],Available: https://unsplash.com/photos/bAK9wQghnHI [Accessed: 20-Jan-2022]
+-->

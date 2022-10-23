@@ -1,0 +1,260 @@
+/*NOTE : Numbers enclosed in the square bracket in inside comment(which appears adjascent to each of the external source embedded 
+on this page), refers to its number in the citations list(present at the bottom of this HTMl code)*/
+
+/* SLIDESHOW using Animation and Transform Property, NO JavaScript */
+/*---------------------------------------------------------------------*/
+
+/* setting up container for images used in slideshow with overflow hidden
+so that only one image is visible at a time */
+#slideshow{
+    width: 960px;
+    height: 640px;
+    position: relative;
+    display: flex;
+    margin: 2rem auto;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+/* making container of slideshow images to cover 100% width 
+of slideshow container, changing display to flex so that images
+are arranged as flex items and adding animation of 18s long
+looping for ever */
+.slideshow_img_div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: slideshow 18s linear infinite;
+    display: flex;
+}
+
+/*setting each slide in way that relative distance between them is 300px in horizontal direction, 
+they are stacked over each other with last slide being at the bottom of the stack
+and setting after how much time the animation starts for each slide*/
+#slide1{
+    transform: translate(100%);
+    z-index: 6;
+    animation-delay: 0s;
+}
+
+#slide2{
+    transform: translate(100%);
+    z-index: 5;
+    animation-delay: 3s;
+}
+
+#slide3{
+    transform: translate(100%);
+    z-index: 4;
+    animation-delay: 6s;
+}
+
+#slide4{
+    transform: translate(100%);
+    z-index: 3;
+    animation-delay: 9s;
+}
+
+#slide5{
+    transform: translate(100%);
+    z-index: 2;
+    animation-delay: 12s;
+}
+
+#slide6{
+    transform: translate(100%);
+    z-index: 1;
+    animation-delay: 15s;
+}
+
+
+/* making image to cover 100% width of the slideshow_img_div container*/
+.slideshow_img_div img{
+    width: 100%;
+}
+
+/* adding keyframe rule to control the intermediate steps of the 
+slideshow by using transform property with translate value for
+changing abscissa */
+@keyframes slideshow {
+    0%{
+        transform: translate(0%);
+    }
+    25%{
+        transform: translate(0%);
+    }
+    30%{
+        transform: translate(-100%);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+}
+
+
+/*making all offers, attractions and places to stay to be placed in one line*/
+.flex_offers, .flex_attractions, .flex_places_to_stay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*------------------------------------------------------------------------------*/
+/* SPECIAL OFFERS STYLING */
+/*styling each individual offer*/
+.offer{
+    display: inline-block;
+    border-radius: 2rem;
+    width: 300px;
+    height: 200px;
+    background-repeat: no-repeat;
+    margin: 1.5rem;
+    border: 1px solid white;
+    box-shadow: 2px 2px 1px #777;
+}
+
+/*setting background image of offer1 with a radiel gradient layering
+the background image*/
+.offer1 {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5),rgba(17, 17, 17, 0.7)),url(../images/offer1-family-package-unsplash.jpg); /*[1]*/
+}
+
+/*setting background image of offer2 with a radiel gradient layering
+the background image*/
+.offer2{
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5),rgba(17, 17, 17, 0.5)),url(../images/offer2-buy-ticket-unsplash.jpg);/*[2]*/
+}
+
+/*setting background image of offer3 with a radiel gradient layering
+the background image*/
+.offer3{
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5),rgba(17, 17, 17, 0.5)),url(../images/offer3-free-park-unsplash.jpg);/*[3]*/
+}
+
+/*styling the text for each offer*/
+.offer a{
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    margin: 3.5rem auto;
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+/*------------------------------------------------------------------------------*/
+/* FEATURED ATTRACTIONS STYLING */
+
+
+/*Styling is the same for all text of featured attractions*/
+.attraction {
+    display: inline-block;
+    border-radius: 2rem;
+    border: 1px solid white;
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+    margin: 1.5rem;
+    overflow: hidden;
+    box-shadow: 2px 2px 1px #777;
+}
+
+/*styling the text of each attraction under "Featured attractions" section*/
+.attraction a{
+    display: block;
+    color: #ffffff;
+    margin-top: 30%;
+    text-align: center;
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.3rem;
+    text-decoration: none;
+}
+
+/*setting background image of attractions under "Featured attractions" section with a radiel gradient layering
+the background image*/
+#attraction_1{
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5),rgba(17, 17, 17, 0.5)),url(../images/restaurant1-unsplash.jpg);/*[4]*/
+}
+
+#attraction_2{
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5),rgba(17, 17, 17, 0.5)),url(../images/animal-performance-sealion-unsplash.jpg);/*[5]*/
+}
+
+#attraction_3{
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5),rgba(17, 17, 17, 0.5)),url(../images/rides-surfing-pexel.jpg);/*[6]*/
+}
+
+
+/*------------------------------------------------------------------------------*/
+/* FEATURED PLACES TO STAY STYLING */
+
+/*Styling is the same for all text of featured attractions*/
+.place_to_stay {
+    display: inline-block;
+    border-radius: 2rem;
+    border: 1px solid white;
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    margin: 1.5rem;
+    overflow: hidden;
+    box-shadow: 2px 2px 1px #777;
+}
+
+/*styling the link of each hotel under "Places to stay" section*/
+.place_to_stay a{
+    display: block;
+    color: #ffffff;
+    margin-top: 35%;
+    text-align: center;
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.6rem;
+    text-decoration: none;
+}
+
+/*Inserting Background image to hotels section*/
+#hotel1{
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5),rgba(17, 17, 17, 0.5)),url(../images/hotel2.jpg);/*[7]*/
+}
+
+#hotel2{
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5),rgba(17, 17, 17, 0.5)),url(../images/hotel1.jpg);/*[8]*/
+}
+
+/*adding margin to sections of index.html*/
+.attractions,.offers,.places_to_stay{
+    margin:5rem
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/*following media rule will be used when screen size is less than or equal to 900px*/
+@media screen and (max-width: 1000px) {
+    #slideshow {
+        width: 675px;
+        height: 450px;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/*following media rule will be used when screen size is less than or equal to 700px*/
+@media screen and (max-width: 700px) {
+    #slideshow {
+        width: 450px;
+        height: 300px;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*CITATIONS FOR THE IMAGES INSERTED AS BACKGROUND IMAGE VIA CSS*/
+/*  [1]: K. Delvecchio, 2017, [Online], Available: https://unsplash.com/photos/7noZJ_4nhU8 [Accessed: 20-Jan-2022]
+    [2]: A. Li, 2020, [Online], Available: https://unsplash.com/photos/A_dJOYpxEVU [Accessed: 20-Jan-2022]
+    [3]: A. Nygard, 2020, [Online], Available: https://unsplash.com/photos/FwRTLAjTeE0 [Accessed: 20-Jan-2022]
+    [4]: A. Seth, 2019, [Online], Available:https://unsplash.com/photos/hDbCjHNdF48 [Accessed: 14-Jan-2022]
+    [5]: S. Crain, 2019, [Online], Available:https://unsplash.com/photos/8jk64drEMcw [Accessed: 13-Jan-2022]
+    [6]: J. Loiterton, 2020, [Online], Available: https://www.pexels.com/photo/people-surfing-on-sea-waves-4319752/ [Accessed: 13-Jan-2022]
+    [7]: MP, 2015, [Online],Available: https://unsplash.com/photos/fV2dM2WvKvE [Accessed: 20-Jan-2022]
+    [8]: W. Funfun, 2018, [Online],Available: https://unsplash.com/photos/bAK9wQghnHI [Accessed: 20-Jan-2022]
+*/

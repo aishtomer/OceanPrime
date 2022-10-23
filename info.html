@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--to display the title of page on browsers tab-->
+        <title>Ocean Prime-Plan You Visit</title>
+
+        <!--Adding meta tags-->
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a website for a 'Ocean Prime' theme park.">
+        <meta name="author" content="Team-94">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="'Ocean Prime' 'Theme Park' 'Amusement Park' Holidays Ocean Park Fun">
+        
+        <!--adding favicon to the website-->
+        <link rel="shortcut icon" href="images/Ocean Prime Logo - Original - 5000x5000.ico"><!--[1]-->
+        
+        <!--Importing Stylesheets to style the page-->
+        <link rel="stylesheet" href="css/info.css">
+        <link rel="stylesheet" href="css/common.css">
+    </head>
+
+    <!--NOTE : Numbers enclosed in the square bracket in inside comment(which appears adjascent to each of the external source embedded
+            on this page), are the reference number of the embedded content in the citations list(present at the bottom of this HTMl code as a comment)-->
+
+    <body>
+    <!--HEADER-->
+    <header id="site_header">
+            <!--Logo of Theme Park-->
+            <div id="logo">
+                <!--linking theme park logo with home page-->
+                <a href="./index.html">
+                    <img src="images/logo.svg" alt="theme park logo showing a ship on water waves." title="Go to Home Page"><!--[1]-->
+                </a>
+            </div>
+            
+            <!--Theme Park Name and Slogan to be displayed at center of the header-->
+            <div id="park_name_with_tagline">
+                <h1>Ocean Prime</h1>
+                <h2>Crown of Atlantis</h2>
+            </div>
+            
+            <!--Opening Hours Banner to be displayed in top-right corner of the page-->
+            <div id="opening_hrs_banner">
+                <span>Today's opening hours</span>
+                <a href="info.html#opening_hours">View all opening times</a>
+            </div>
+    </header>
+
+    <!--NAVIGATION BAR-->
+    <nav id="navigation_bar"> 
+        <!--adding the list of options that will be used to navigate through the website-->
+        <ul>
+            <li><a href="index.html" class="main_nav_anchor">Home</a></li>
+            <!--list items with class dropable denote the options on primary navigation bar that have secondary navigation bar attached to it-->
+            <li class="dropable">
+                <a class="main_nav_anchor" href="attractions.html">Our Attractions</a>
+                <!--following div represents the content that will appear as a secondary navigation bar when above link is hovered-->
+                <div class="dropped_content">
+                    <div class="flex_display_content">
+                        <div class="dropped_links">
+                            <!--links present in the secondary navigation bar-->
+                            <a href="attractions.html#rides">Rides for Everyone</a>
+                            <a href="attractions.html#festival_specials">Festival Specials</a>
+                            <a href="attractions.html#meet_ocean_friends">Meet Ocean Friends</a>
+                            <a href="attractions.html#crystal_ballet">Crystal Ballet</a>
+                            <a href="attractions.html#aquater">Aquater</a>
+                            <a href="attractions.html#ocean_galaxy">Ocean Galaxy</a>
+                        </div>
+                        <!--image accompanying the displayed seconadry navigation block-->
+                        <img src="images/animal-performance-penguin-unsplash.jpg" class="sec_nav_img" alt="an image showing 3 penguins dancing."><!--[2]-->
+                    </div>
+                </div>
+            </li>
+            <!--list items with class dropable denote the options on primary navigation bar that have secondary navigation bar attached to it-->
+            <li class="dropable">
+                <a class="main_nav_anchor current_open" href="info.html">Plan Your Visit</a>
+                <!--following div represents the content that will appear as a secondary navigation bar when above link is hovered-->
+                <div class="dropped_content">
+                    <div class="flex_display_content">
+                        <div class="dropped_links">
+                            <!--links present in the secondary navigation bar-->
+                            <a href="info.html#ticket_info">Book Tickets</a>
+                            <a href="info.html#opening_hours">Opening Hours</a>
+                            <a href="info.html#map">Park Map</a>
+                            <a href="info.html#places_to_stay">Places to Stay</a>
+                        </div>
+                        <!--image accompanying the displayed seconadry navigation block-->
+                        <img src="images/sec_nav_plan_visit.jpg" class="sec_nav_img" alt="an image showing entrance view of the theme park where people are moving about."><!--[3]-->
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!--Book Tickets Link that will appear on the right side of the navigation bar-->
+        <a href="info.html#ticket_info" id="book_tickets_btn">Book Tickets</a>
+    </nav>
+
+    <!--START OF MAIN CONTENT OF THE PAGE-->
+    <main>
+
+      <!--SECTION 1: BOOK TICKETS-->
+      <!--Section containing table of ticket prices and form to book tickets-->
+      <section id="ticket_info">
+        <h3>Book Tickets</h3>
+        <!--Table listing ticket prices for adults and kids-->
+        <table id="table_ticket_prices">
+            <!--Adding 'Ticket Prices' caption-->
+            <caption id="ticket_table_caption">Ticket Prices</caption>
+
+            <!--Row 1 of table with 2 data cells stating adult ticket price-->
+            <tr>
+                <th>For Adults</th>
+                <td>$25</td>
+            </tr>
+            <!--Row 2 of table with 2 data cells stating kid ticket price-->
+            <tr>
+                <th>For Kids (10 years old and younger)</th>
+                <td>$10</td>
+            </tr>
+        </table>
+
+        <!--Form to enable visitors to book tickets-->
+        <form action="#" id="form_book_tickets">
+            <div class="entry_field">
+              <label for="number_adult_tickets" >Number of Tickets for Adults:</label>
+              <!--User can input only a number >=0 of the number of adult tickets they would like to book-->
+              <input type="number" id="number_adult_tickets" min="0" placeholder="Please enter a number" required>
+            </div>
+
+            <div class="entry_field">
+              <label for="number_kid_tickets" >Number of Tickets for Kids:</label>
+              <!--User can input only a number >=0 of the number of kid tickets they would like to book-->
+              <input type="number" id="number_kid_tickets" min="0" placeholder="Please enter a number" required>
+            </div>
+            
+            <!--Button will only submit the form if user has filled out a number (>=0) for both adult and kid tickets-->
+            <input type="submit" id="purchase_tickets" value="Book Tickets">
+            <!--displaying the "You are booked" message after form gets submited-->
+            <label for="#purchase_tickets" id="confirm_purchase">You are booked!</label>  
+        </form>
+      </section>
+
+      <!--SECTION 2: OPENING HOURS-->
+      <section id="opening_hours">
+        <h3>Opening Times</h3>
+        <!--Start of calendar-->
+        <div class="calendar_table">
+          <div class="month">
+            <!--Header to show the month-->
+            <span>December<br></span>
+            <span>2021</span>
+
+            <!--Start of calendar using table-->
+            <div>
+              <!--Calendar table-->
+              <table class="text_center">
+                <!--Head of calendar table-->
+                <thead class="calendar_week_days">
+                  <tr>
+                    <th scope="col" class="text_center">Mon</th>
+                    <th scope="col" class="text_center">Tue</th>
+                    <th scope="col" class="text_center">Wed</th>
+                    <th scope="col" class="text_center">Thu</th>
+                    <th scope="col" class="text_center">Fri</th>
+                    <th scope="col" class="text_center">Sat</th>
+                    <th scope="col" class="text_center">Sun</th>
+                  </tr>
+                </thead>
+                
+                <!--Body of calendar with the dates-->
+                <tbody class="calendar_week">
+                    <!--each of the following row represents the week of calendar-->
+                    <tr>
+                      <td class="no_calendar_week" colspan="2">&nbsp;</td>
+                      <td><time datetime="2021-12-01" class="blue_text img_circle">1</time></td>
+                      <td><time datetime="2021-12-02" class="blue_text img_circle">2</time></td>
+                      <td><time datetime="2021-12-03" class="blue_text img_circle">3</time></td>
+                      <td><time datetime="2021-12-04" class="blue_text img_circle">4</time></td>
+                      <td><time datetime="2021-12-05" class="blue_text img_circle">5</time></td>
+                    </tr>
+
+                    <tr>
+                      <td><time datetime="2021-12-06" class="blue_text img_circle">6</time></td>
+                      <td><time datetime="2021-12-07" class="blue_text img_circle">7</time></td>
+                      <td><time datetime="2021-12-08" class="blue_text img_square">8</time></td>
+                      <td><time datetime="2021-12-09" class="blue_text img_square">9</time></td>
+                      <td><time datetime="2021-12-10" class="blue_text img_square">10</time></td>
+                      <td><time datetime="2021-12-11" class="blue_text img_square">11</time></td>
+                      <td><time datetime="2021-12-12" class="blue_text img_square">12</time></td>
+                    </tr>
+                    <tr>
+                      <td><time datetime="2021-12-13" class="blue_text img_square">13</time></td>
+                      <td><time datetime="2021-12-14" class="blue_text img_square">14</time></td>
+                      <td><time datetime="2021-12-15" class="blue_text img_square">15</time></td>
+                      <td><time datetime="2021-12-16" class="blue_text img_square">16</time></td>
+                      <td><time datetime="2021-12-17" class="blue_text img_square">17</time></td>
+                      <td><time datetime="2021-12-18" class="blue_text img_square">18</time></td>
+                      <td><time datetime="2021-12-19" class="blue_text img_square">19</time></td>
+                    </tr>
+
+                    <tr>
+                      <td><time datetime="2021-12-20" class="blue_text img_square">20</time></td>
+                      <td><time datetime="2021-12-21" class="blue_text img_square">21</time></td>
+                      <td><time datetime="2021-12-22" class="blue_text img_square">22</time></td>
+                      <td><time datetime="2021-12-23" class="blue_text img_square">23</time></td>
+                      <td><time datetime="2021-12-24" class="blue_text img_square">24</time></td>
+                      <td><time datetime="2021-12-25" class="blue_text img_square">25</time></td>
+                      <td><time datetime="2021-12-26" class="blue_text img_square">26</time></td>
+                    </tr>
+
+                    <tr>
+                      <td><time datetime="2021-12-27" class="blue_text img_square">27</time></td>
+                      <td><time datetime="2021-12-28" class="blue_text img_square">28</time></td>
+                      <td><time datetime="2021-12-29" class="blue_text img_square">29</time></td>
+                      <td><time datetime="2021-12-30" class="blue_text img_square">30</time></td>
+                      <td><time datetime="2021-12-31" class="blue_text img_square">31</time></td>
+                      <td class="no_calendar_week" colspan="2">&nbsp;</td>
+                    </tr>
+                </tbody>
+              </table>
+
+              <!--Start of legend-->
+              <ul class="opening_info">
+                <li class="text_left">
+                  <span class="img_bg img_square"></span>9:00am to 5:00pm
+                </li>
+                <li class="text_left">
+                  <span class="img_bg img_circle"></span>Closed
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!--SECTION 3: THEME PARK MAP-->
+      <section id="map">
+        <!--Section Heading-->
+        <h3>Theme Park Map</h3>
+
+        <!--Starting of the block that contains map image, marker div tags and filter options-->
+        <div class="white_background">
+          <!--title displayed in front of filter options-->
+          <span id="filter_by">Filter By: </span>
+
+          <!--following input and label tag constitute a single filter option that allows user to select it and see the markers on map corresponding to the category selected-->
+          <input type="checkbox" id="rides">
+          <label for="rides" class="filters">Rides</label>
+
+          <!--following input and label tag constitute a single filter option that allows user to select it and see the markers on map corresponding to the category selected-->
+          <input type="checkbox" id="ocean_friends">
+          <label for="ocean_friends" class="filters">Meet Ocean Friends</label>
+
+          <!--following input and label tag constitute a single filter option that allows user to select it and see the markers on map corresponding to the category selected-->
+          <input type="checkbox" id="aquater">
+          <label for="aquater" class="filters">Aquater</label>
+
+          <!--following input and label tag constitute a single filter option that allows user to select it and see the markers on map corresponding to the category selected-->
+          <input type="checkbox" id="crystal_ballet">
+          <label for="crystal_ballet" class="filters">Crystal Ballet</label>
+
+          <!--following input and label tag constitute a single filter option that allows user to select it and see the markers on map corresponding to the category selected-->
+          <input type="checkbox" id="ocean_galaxy">
+          <label for="ocean_galaxy" class="filters">Ocean Galaxy</label>
+
+          <!--following input and label tag constitute a single filter option that allows user to select it and see the markers on map corresponding to the category selected-->
+          <input type="checkbox" id="places_to_stay_checkbox">
+          <label for="places_to_stay_checkbox" class="filters">Places to Stay</label>
+
+          <!--following div tag contains all the map markers(defined as a div) and map image-->
+          <div class="map">
+              <!--map image that is displayed on the page-->
+              <!--Cliff’s Amusement Park, 'Theme park map',  2020. [Online]. Available: https://www.cliffsamusementpark.com/interactive-park-map/ [Accessed: 17-Dec-2021]-->
+              <img src="images/map-v1.png" id="map_img" alt="image of the map of the theme park.">
+
+              <!--following text shows the source from where images getting displayed inside map markers have been taken-->
+              <span id="cite_icon">
+                All the icon images used inside the map markers are taken from <a href="https://icons8.com/">Icons8</a>
+              </span>
+
+              <!--map markers for filter option 1:rides, each of the div will be styled by using CSS to give the shape of typical map marker, anchor tag is used to link the
+              marker to its corresponding section in the website and div tags which are inside other divs-->
+              <div class="marker rides_marker" id="roller_coaster_marker">
+                <!--roller coaster marker-->
+                <a href="attractions.html#rides">
+                  <div class="marker_img roller_coaster_img"></div>
+                </a>
+              </div>
+              <div class="marker rides_marker" id="water_slides_marker">
+                <!--water slides marker-->
+                <a href="attractions.html#rides">
+                  <div class="marker_img water_slides_img"></div>
+                </a>
+              </div>
+              <div class="marker rides_marker" id="jet_ski_marker">
+                <!--jet ski marker-->
+                <a href="attractions.html#rides">
+                  <div class="marker_img jet_ski_img"></div>
+                </a>
+              </div>
+              <div class="marker rides_marker" id="surf_marker">
+                <!--surf marker-->
+                <a href="attractions.html#rides">
+                  <div class="marker_img surf_img"></div>
+                </a>
+              </div>
+              <div class="marker rides_marker" id="ferris_wheel_marker">
+                <!--ferris wheel marker-->
+                <a href="attractions.html#rides">
+                  <div class="marker_img ferris_wheel_img"></div>
+                </a>
+              </div>
+              <div class="marker rides_marker" id="boat_ride_marker">
+                <!--boat ride marker-->
+                <a href="attractions.html#rides">
+                  <div class="marker_img boat_ride_img"></div>
+                </a>
+              </div>
+
+              <!--map markers for filter option 2:meet ocean friends, each of the div will be styled by using CSS to give the shape of typical map marker, anchor tag is used to link the
+              marker to its corresponding section in the website and div tags which are inside other divs -->
+              <div class="marker ocean_friends_marker" id="penguin_marker">
+                <!--penguin marker-->
+                <a href="attractions.html#meet_ocean_friends">
+                  <div class="marker_img penguin_img"></div>
+                </a>
+              </div>
+              <div class="marker ocean_friends_marker" id="dolphin_marker">
+                <!--dolphin marker-->
+                <a href="attractions.html#meet_ocean_friends">
+                  <div class="marker_img dolphin_img"></div>
+                </a>
+              </div>
+              <div class="marker ocean_friends_marker" id="killer_whale_marker">
+                <!--killer whale marker-->
+                <a href="attractions.html#meet_ocean_friends">
+                  <div class="marker_img killer_whale_img"></div>
+                </a>
+              </div>
+              <div class="marker ocean_friends_marker" id="sea_lion_marker">
+                <!--sea lion marker-->
+                <a href="attractions.html#meet_ocean_friends">
+                  <div class="marker_img sea_lion_img"></div>
+                </a>
+              </div>
+              <div class="marker ocean_friends_marker" id="shark_marker">
+                <!--shark marker-->
+                <a href="attractions.html#meet_ocean_friends">
+                  <div class="marker_img shark_img"></div>
+                </a>
+              </div>
+
+              <!--map marker for filter option 3:aquater, this div will be styled by using CSS to give the shape of typical map marker, anchor tag is used to link the
+              marker to its corresponding section in the website and div tags which are inside other divs-->
+              <div class="marker aquater_marker" id="aquater_marker">
+                <a href="attractions.html#aquater">
+                  <div class="marker_img aquater_img"></div>
+                </a>
+              </div>
+
+              <!--map marker for filter option 4:crystal ballet, this div will be styled by using CSS to give the shape of typical map marker, anchor tag is used to link the
+              marker to its corresponding section in the website and div tags which are inside other divs-->
+              <div class="marker crystal_ballet_marker" id="crystal_ballet_marker">
+                <a href="attractions.html#crystal_ballet">
+                  <div class="marker_img crystal_ballet_img"></div>
+                </a>
+              </div>
+
+              <!--map marker for filter option 5:ocean galaxy, this div will be styled by using CSS to give the shape of typical map marker, anchor tag is used to link the
+              marker to its corresponding section in the website and div tags which are inside other divs-->
+              <div class="marker ocean_galaxy_marker" id="ocean_galaxy_marker">
+                <a href="attractions.html#ocean_galaxy">
+                  <div class="marker_img ocean_galaxy_img"></div>
+                </a>
+              </div>
+
+              <!--map marker for filter option 6: places to stay, this div will be styled by using CSS to give the shape of typical map marker, anchor tag is used to link the
+              marker to its corresponding section in the website and div tags which are inside other divs-->
+              <div class="marker places_to_stay_marker" id="places_to_stay_marker1">
+                <a href="#place_to_stay_1">
+                  <div class="marker_img places_to_stay_img"></div>
+                </a>
+              </div>
+
+              <!--map marker for filter option 6: places to stay, this div will be styled by using CSS to give the shape of typical map marker, anchor tag is used to link the
+              marker to its corresponding section in the website and div tags which are inside other divs-->
+              <div class="marker places_to_stay_marker" id="places_to_stay_marker2">
+                <a href="#place_to_stay_2">
+                  <div class="marker_img places_to_stay_img"></div>
+                </a>
+              </div>
+            </div>
+
+            <!--dropable list appearing below the map image-->
+            <dl class="list_below_map" id="list_below_map_id">
+              <!--following div block includes all the first list item and hidden content that appears when list item is hovered -->
+              <div class="dropable_list_item">
+                <!--list-item 1-->
+                <dt class="on_hover">Useful Information</dt>
+                <!--dropdown content corresponding to above list item-->
+                <dd class="dropdown">
+                  <ul>
+                    <li>Facility to keep your belongings safe in lockers, when youare on tour.</li>
+                    <li>Facility for instant medical help, if needed.</li>
+                    <li>Restrooms located at convenient distances.</li>
+                    <li>Facility for online payments at all ticket booths,restaurant and hotels.</li>
+                    <li>No charges for Parking.</li>
+                  </ul>
+                </dd>
+              </div>
+
+              <!--following div block includes all the second list item and hidden content that appears when list item is hovered -->
+              <div class="dropable_list_item">
+                <!--list-item 2-->
+                <dt class="on_hover">Accessibility in the park</dt>
+                <!--dropdown content corresponding to above list item which appears when list item is hovered by the arrow-->
+                <dd class="dropdown">
+                  <blockquote cite="https://brightwatergroup.com/news-articles/14-inspirational-quotes-for-people-with-disabilities/">"Your present circumstances don't determine where you can go; they merely determine where you start." - Nido Qubein</blockquote>
+                  <p>
+                    At Ocean Prime, we provide visitors with disability a rich experience of exploring the vast ocean kingdom at their own pace and assistance, if desired. In order to get assistance please inform the staff prior to your arrival at the park, by contacting
+                    us through an <a href="#contact_us_id">email</a> or <a href="#contact_us_id">phone no.</a>, so that we could make arrangements to ensure you don't miss anything.
+                  </p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!--SECTION 4: PLACES TO STAY-->
+        <!--Section containing details of the 2 Ocean Prime hotels-->
+        <section id="places_to_stay">
+          <h3>Places to Stay</h3>
+
+          <!--Div tag containing information about Ocean Valley hotel-->
+          <div class="places_to_stay_container">
+            <div id="place_to_stay_1" class="place_to_stay">
+              <!--Image of hotel's exterior-->
+              <img src="images/hotel2.jpg" alt="Pool side view of Ocean Valley."> <!--[1]-->
+              <!--Name of hotel-->
+              <h4 class="hotel_h4">Ocean Valley</h4>
+              <div class="hotel_description">
+                <!--Short introduction of hotel-->
+                <p>
+                  Located on Ocean Prime property, this beautiful 3-star hotel
+                  provides a home away from home.
+                </p>
+                <!--Unordered list containing 4 hotel amenities specific to Ocean Valley-->
+                <ul>
+                  <li>Ocean-themed interior</li>
+                  <li>Complimentary free breakfast</li>
+                  <li>100% smoke free</li>
+                  <li>Free Wi-Fi</li>
+                </ul>
+
+                <!--Call link of Ocean Valley's phone number. If user clicks on it, then Ocean Valley will be called.-->
+                <span class="hotel_phone_number">To book, call: </span>
+                <a href="tel:9041239567">904-123-9567</a>
+              </div>
+            </div>
+
+            <!--Div tag containing information about Aqua Diamond-->
+            <div id="place_to_stay_2" class="place_to_stay">
+              <!--Image of hotel's exterior-->
+              <img src="images/hotel1.jpg" alt="Exterior view of Aqua Diamond located in front of blue water."><!--[2]-->
+
+              <!--Name of hotel-->
+              <h4 class="hotel_h4">
+                Aqua Diamond
+              </h4>
+              <div class="hotel_description">
+                <!--Short introduction of hotel-->
+                <p>
+                  This 5-star luxury hotel is located inside the theme park and
+                  boasts a gourmet seafood reastaurant as well as exceptional room
+                  service to transport you to a tropical paradise.
+                </p>
+                <!--Unordered list containing 4 hotel amenities specific to Aqua Diamond-->
+                <ul>
+                  <li>Tropical reef decor</li>
+                  <li>Luxury Spa</li>
+                  <li>Pet boarding and grooming services</li>
+                  <li>Complimentary transport to and from airport</li>
+                </ul>
+
+                <!--Call link of Aqua Diamond's phone number. If user clicks on it, then Ocean Valley will be called.-->
+                <span class="hotel_phone_number">To book, call: </span>
+                <a href="tel:9041239568">904-123-9568</a>
+
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="site_footer">
+      <div class="footer_navigation">
+          <!--the list of attraction links with heading that will be part of footer-->
+          <ul class="attractions_list">
+              <!--adding the heading for the list of attractions link-->
+              <li><h4>Our Attractions</h4></li>
+              <li>
+                  <!--list of links that will appear under "Our Attractions" heading in the footer-->
+                  <ul>
+                      <li><a href="attractions.html#rides">Rides</a></li>
+                      <li><a href="attractions.html#festival_specials">Festival Specials</a></li>
+                      <li><a href="attractions.html#meet_ocean_friends">Meet Our Ocean Friends</a></li>
+                      <li><a href="attractions.html#crystal_ballet">Crystal Ballet</a></li>
+                      <li><a href="attractions.html#aquater">Aquater</a></li>
+                      <li><a href="attractions.html#ocean_galaxy">Ocean Galaxy</a></li>
+                  </ul>
+              </li>
+          </ul>
+
+          <!--the list of 'plan you visit' page links with heading that will be part of footer-->
+          <ul class="plan_your_visit_list">
+              <!--adding the heading for the list of 'plan you visit' page links-->
+              <li><h4>Plan Your Visit</h4></li>
+              <li>
+                  <!--list of links that will appear under "Plan Your Visit" heading in the footer-->
+                  <ul>
+                      <li><a href="./info.html#ticket_info">Book tickets</a></li>
+                      <li><a href="./info.html#opening_hours">Opening days and times</a></li>
+                      <li><a href="./info.html#map">Map of the Theme Park</a></li>
+                      <li><a href="./info.html#places_to_stay">Places to stay</a></li>
+                  </ul>
+              </li>
+          </ul>
+
+          <!--Contact information list appearing at the footer of the page-->
+          <ul class="contact_us_list">
+              <!--giving heading to the list containing contact information like email.-->
+              <li><h4>Contact Us</h4></li>
+              <li>
+                  <!--list of links that will appear under "Contact Us" heading in the footer-->
+                  <ul>
+                      <li>phone no.: <a href="tel:123457890">123457890</a></li>
+                      <li>email: <a href="mailto:someone@oceanprime.com">someone@oceanprime.com</a></li>
+                  </ul>
+              </li>
+          </ul>
+
+          <!--Location of Theme Park added as a list appearing as a part of footer-->
+          <ul class="theme_park_location_list">
+              <!--giving heading to the list containing location of "Ocean Prime"(theme park's name)-->
+              <li><h4>Location of Ocean Prime</h4></li>
+              <li>
+                  <!--specifying location of theme park as a list-->
+                  <ul>
+                      <li>8684 Ocean Street<br> Miami, Florida<br> 97204<br> USA</li>
+                  </ul>
+              </li>
+          </ul>
+
+          <!--Sign up for Newsletter invitation, present as a part of the footer-->
+          <div class="sign_up_area">
+              <!--giving heading to the invitation-->
+              <h4>Sign Up for Newsletter</h4> 
+              <!--adding text that appears under the heading "Sign Up for Newsletter"-->
+              <span>Sign up for our newsletter to get updates about our attractions, special offers and so much more.</span>
+              <!--adding a form to facilitate the user to enter his emial address if he wants to subscribe-->
+              <form action="#">
+                  <input id="your_email_address" type="text" placeholder="enter your email address"> 
+                  <!--adding a subscribe button, which appears as a part of the footer-->
+                  <button id="subscribe_button">Subscribe</button>
+              </form>
+          </div>
+      </div>
+
+      <!--Copyright notice which will be displayed below the part(with white background) of the footer-->
+      <p class="copyright_notice">&copy; 2021 Ocean Prime. All rights reserved.</p>
+
+      <!--div block to add a background image at the bottom of the footer-->
+      <div class="repeat_border"></div>
+    </footer>
+
+    <!--BUBBLE ANIMATION and GRADIENT that appears in the background-->
+    <div class="bub_bgnd">
+      <!--each of the following div represents the box which will be styled to give the appearance of Bubble-->
+      <div class="bubble bubble1 B_orange"></div>
+      <div class="bubble bubble2 B_blue"></div>
+      <div class="bubble bubble3 B_pink"></div>
+      <div class="bubble bubble4 B_orange"></div>
+      <div class="bubble bubble5 B_green"></div>
+      <div class="bubble bubble6 B_pink"></div>
+      <div class="bubble bubble7 B_violet"></div>
+      <div class="bubble bubble8 B_orange"></div>
+      <div class="bubble bubble9 B_blue"></div>
+      <div class="bubble bubble10 B_violet"></div>
+      <div class="bubble bubble11 B_pink"></div>
+      <div class="bubble bubble12 B_green"></div>
+      <div class="bubble bubble13 B_blue"></div>
+      <div class="bubble bubble14 B_orange"></div>
+      <div class="bubble bubble15 B_green"></div>
+      <div class="bubble bubble16 B_pink"></div>
+      <div class="bubble bubble17 B_violet"></div>
+      <div class="bubble bubble18 B_orange"></div>
+      <div class="bubble bubble19 B_blue"></div>
+      <div class="bubble bubble20 B_pink"></div>
+    </div>
+  </body>
+</html>
+
+<!--------------------------------------------------------------------------->
+<!--CITATION FOR IMAGES INSERTED VIA HTML-->
+<!--
+  [1]: MP, 2015, [Online],Available: https://unsplash.com/photos/fV2dM2WvKvE [Accessed: 20-Jan-2022]
+  [2]: W. Funfun, 2018, [Online],Available: https://unsplash.com/photos/bAK9wQghnHI [Accessed: 20-Jan-2022]
+  [3]: cliffsamusementpark.com,Theme park map, Year Published: NA,[Online], Available: https://www.cliffsamusementpark.com/interactive-park-map/ [Accessed: 17-Dec-2021]
+-->
+
+<!--CITATION FOR IMAGES INSERTED AS VIA CSS-->
+<!--
+  [1]: icons8.com, Roller Coaster, Year Published: NA, [Online], Available: https://icons8.com/icon/8718/roller-coaster [Accessed: 17-Jan-2022]
+  [2]: icons8.com,Water Park, Year Published: NA, [Online], https://icons8.com/icon/8645/water-park
+  [3]: icons8.com, Jet Ski, Year Published: NA, [Online],https://icons8.com/icon/74785/jet-ski
+  [4]: icons8.com, Surf, Year Published: NA, [Online], https://icons8.com/icon/74693/skimboarding
+  [5]: icons8.com, Public Service, Year Published: NA, [Online], https://icons8.com/icon/Ai4rx298yxrD/external-ferris-wheel-public-service-photo3ideastudio-solid-photo3ideastudio
+  [6]: icons8.com, Sail Boat, Year Published: NA, [Online], https://icons8.com/icon/9317/sail-boat
+  [7]: icons8.com, Penguin, Year Published: NA, [Online], https://icons8.com/icon/36293/pinguin
+  [8]: icons8.com, Dolphin Emulator, Year Published: NA, [Online], https://icons8.com/icon/37258/dolphin-logo
+  [9]: icons8.com, Orca, Year Published: NA, [Online], https://icons8.com/icon/113934/orca
+  [10]: icons8.com, MariaDB, Year Published: NA, [Online], https://icons8.com/icon/nrY6pkbRkJCi/maria-db
+  [11]: icons8.com, Shark, Year Published: NA, [Online], https://icons8.com/icon/gne1NGA3i1EJ/shark-body
+  [12]: icons8.com, Dinner, Year Published: NA, [Online], https://icons8.com/icon/XFVIThfU3nTF/dinner--v2
+  [13]: icons8.com, Ballet, Year Published: NA, [Online], https://icons8.com/icon/UVObhgQ7o2Gb/external-ballet-russia-justicon-lineal-justicon
+  [14]: icons8.com, Fish, Year Published: NA, [Online], https://icons8.com/icon/haw5edTubOKF/external-fish-landscape-vitaliy-gorbachev-fill-vitaly-gorbachev-1
+  [15]: icons8.com, Hotel, Year Published: NA, [Online], https://icons8.com/icon/10529/5-star-hotel--v2
+  [16]: reshot.com, Circle, Year Published: NA, [Online], https://www.reshot.com/free-svg-icons/item/circle-23Z87BEMNJ/
+  [17]: reshot.com, Arrow, Year Published: NA, [Online], https://www.reshot.com/free-svg-icons/item/arrow-chevron-right-WDGHUKQ634/
+  [18]: reshot.com, Arrow, Year Published: NA, [Online], https://www.reshot.com/free-svg-icons/item/arrow-chevron-down-EUCMLYADT9/ 
+-->

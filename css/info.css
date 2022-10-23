@@ -1,0 +1,668 @@
+/*NOTE : Numbers enclosed in the square bracket in inside comment(which appears adjascent to each of the external source embedded 
+  on this page), refers to its number in the citations list(present at the bottom of this HTMl code)*/
+
+/*hide book tickets button*/
+nav #book_tickets_btn{
+  display: none;
+}
+
+/*----------------------------------------------------------*/
+/*CSS for Book Tickets table*/
+
+/*styles the caption "Ticket Prices" of the ticket prices table*/
+caption {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: rgb(255,255,255);
+  background-color: rgb(3,55,93);
+  text-align: center;
+  padding: 1.2rem;
+}
+
+/*style the ticket price table*/
+#table_ticket_prices {
+  background-color: rgb(255,255,255);
+  border-collapse: collapse;
+  width: 50%;
+  margin: 2% auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+/*adds padding to all 4 table cells*/
+#table_ticket_prices th,
+#table_ticket_prices td {
+  padding: 1.2rem;
+}
+
+/*adds a purple border underneath the adult ticket prices row*/
+#table_ticket_prices tr:first-of-type {
+  border-bottom: 1px solid rgb(153,153,255);
+}
+
+/*adds a dark blue border underneath the kid ticket prices row*/
+#table_ticket_prices tr:last-of-type {
+  border-bottom: 4px solid rgb(3,55,93);
+}
+
+/*table headers (e.g. For Adults) are aligned left*/
+#table_ticket_prices th {
+  text-align: left;  
+}
+
+/*table data cells containing the price are bolded with text in center of table cell*/
+#table_ticket_prices td {
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/*----------------------------------------------------------*/
+/*CSS for Book Tickets form*/
+
+/*styles the book tickets form*/
+#form_book_tickets {
+  background-color: rgb(255,255,255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 50%;
+  border: 4px solid rgb(3,55,93);
+  margin: 0% auto 5%;
+}
+
+.entry_field {
+  margin: 5% 9%;
+}
+
+/*sets the font size on the textboxes where user can input number of tickets*/
+.entry_field input {
+  font-size: 0.9rem;
+  float: right;
+}
+
+.entry_field input[id=number_adult_tickets] {
+  margin: 0% 5%;
+}
+
+.entry_field input[id=number_kid_tickets] {
+  margin: 0% 5%;
+}
+
+/*styles the red Book Tickets submit button*/
+#purchase_tickets {
+  display: inline-block;
+  background-color: rgb(255,0,0);
+  color: white;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.3rem 0.7rem;
+  margin: 0% 9% 4%;
+}
+
+/*The label with the message "You are booked!" is hidden from user initially until user clicks red "Book Tickets" button*/
+#confirm_purchase {
+  display: none;
+}
+
+/*When red 'book tickets' button is clicked the message "You are booked!" becomes visible*/
+#purchase_tickets:focus + label {
+  display: inline-block;
+}
+
+/*-----------------------------------------------------------*/
+/*CSS for calendar*/
+
+/*make calendar to expand full width of the opening hours container*/
+#opening_hours table{
+  width: 100%;
+}
+
+/*setting the box type of section 1: Book Tickets and section 2: Opening hours to border box*/
+#opening_hours,#ticket_info{
+  box-sizing: border_box;
+}
+
+/*removing the bullets from the list of legends that appear at the bottom of the calendar*/
+ul.opening_info {
+  list-style-type: none;
+}
+
+/*aligning the all the content of calendar table to be at center of their respective containers*/
+.text_center {
+  text-align: center;
+}
+
+/*align the list of legends to the left*/
+.text_left {
+  text-align: left;
+}
+
+/* Setting the width of the top bar of calendar with respect to the width of the calendar container*/
+.calendar_table {
+  width: 100%;
+}
+
+/*setting the apperance CSS for the calendar conatiner*/
+.month {
+  background: #5dade2;
+  padding-top: 0.05cm;
+  padding-bottom: 0.05cm;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin: 10%;
+  text-align: center;
+  font-size: 150%;
+  font-weight: bold;
+  border-color: #c8e8ff;
+}
+
+/* Top bar box */
+.month ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Days of the week in Mon, Tue, etc */
+.calendar_week_days {
+  margin: 10%;
+  text-align: center;
+  background-color: #03375d;
+  color: white;
+}
+
+/* Spreading the days of the week */
+.calendar_week_days span {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  background-color: #03375d;
+}
+
+/* Spreading the days of the week */
+.calendar_week {
+  background-color: white;
+}
+
+/* Sets the width of the data cells */
+#calendar_week td {
+  width: 14.2%;
+}
+
+/* Background colour for the areas with no dates */
+.no_calendar_week {
+  background-color: #5dade2;
+}
+
+/* To indicate closed dates in calendar */
+.img_circle {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: rgb(237,179,255);
+}
+
+/*To indicate opening hours for days when park is open*/
+.img_square {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-color: #dfff00;
+}
+
+/*setting color for dates on the calendar*/
+.blue_text {
+  color: #03375d;
+}
+
+/*Positioning the calendar*/
+.opening_info {
+  font-size: 100%;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/*setting the dimensions of the list od legends */
+.img_bg {
+  display: inline-block;
+  height: 20px;
+  margin-right: 5px;
+  width: 20px;
+}
+
+
+/*-------------------------------------------------------------------------------*/
+/*Theme Park Map and Filter Feature*/
+.white_background{
+  width: fit-content;
+  height: fit-content;
+}
+
+/*setting the dimensions and margin of the box that contains map image and all the marker div tags*/
+.map{
+  background-color: #ffffff;
+  position: relative;
+  width: 1000px;
+  height: fit-content;
+  margin-top: 1rem;
+}
+
+/*setting the position of map image in the page*/
+#map_img{
+  position: relative;
+}
+
+/*hiding the checkbox symbol that appears in front of each label in the filter options*/
+#map input{
+  display: none;
+}
+
+/*styling the labels that are displayed in front of "filter by:" text present above the map image*/
+label.filters{
+  font-size: 1.1rem;
+  padding: 0.4rem;
+  margin: 1rem 0.5rem;
+  border: 1px solid rgb(250, 128, 114);
+  z-index: 1;
+}
+
+/*styling the label for filter options in such a way that when user hovers on it its
+background-color changes and cursor changes to pointer to indicate that option is clickable*/
+label.filters:hover{
+  cursor:pointer;
+  background-color: rgb(250, 206, 202);
+}
+
+
+/*styling the "filter by:" text that is present above the map image*/
+#filter_by{
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+
+/*changing the background color of the filter option when it is selected by the user*/
+#map input:checked + label{
+  background-color: rgb(250, 128, 114);
+}
+
+
+/*styling divs with class marker to give them shape of typical map marker by using the border radius property*/
+.marker{
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+
+/*styling div containing image inside the map marker*/
+.marker_img{
+  width: 30px;
+  height: 30px;
+  margin: 6px auto;
+  border-radius: 50%;
+  border: 4px solid rgb(253, 252, 252);
+  object-fit: contain;
+  transform: rotate(45deg);
+}
+
+
+/*for displaying the markers, if and only if, category is selected in the filter options displayed above the map image*/
+
+#rides:checked ~ div.map .rides_marker{
+  display: inline;
+}
+
+#ocean_friends:checked ~ div.map .ocean_friends_marker{
+  display: inline;
+}
+
+#aquater:checked ~ div.map .aquater_marker{
+  display: inline;
+}
+
+#crystal_ballet:checked ~ div.map .crystal_ballet_marker{
+  display: inline;
+}
+
+#ocean_galaxy:checked ~ div.map .ocean_galaxy_marker{
+  display: inline;
+}
+
+#places_to_stay_checkbox:checked ~ div.map .places_to_stay_marker{
+  display: inline;
+}
+
+
+/*setting background image to each of the marker to clarify what that map marker represents*/
+div.roller_coaster_img{
+  background: url(../images/icons8-roller-coaster.png),rgb(253, 250, 250);/*[1]*/
+}
+
+div.water_slides_img{
+  background: url(../images/icons8-water-slide.png),rgb(253, 250, 250);/*[2]*/
+}
+
+div.jet_ski_img{
+  background: url(../images/icons8-jet-ski.png),rgb(253, 250, 250);/*[3]*/
+}
+
+div.surf_img{
+  background: url(../images/icons8-surf.png),rgb(253, 250, 250);/*[4]*/
+}
+
+div.ferris_wheel_img{
+  background: url(../images/icons8-ferris-wheel.png),rgb(253, 250, 250);/*[5]*/
+}
+
+div.boat_ride_img{
+  background: url(../images/icons8-boat-ride.png),rgb(253, 250, 250);/*[6]*/
+}
+
+div.penguin_img{
+  background: url(../images/icons8-penguin.png),rgb(253, 250, 250);/*[7]*/
+}
+
+div.dolphin_img{
+  background: url(../images/icons8-dolphin-emulator-100.png),rgb(253, 250, 250);/*[8]*/
+}
+
+div.killer_whale_img{
+  background: url(../images/icons8-killer-whale.png),rgb(253, 250, 250);/*[9]*/
+}
+
+div.sea_lion_img{
+  background: url(../images/icons8-sea-lion.png),rgb(253, 250, 250);/*[10]*/
+}
+
+div.shark_img{
+  background: url(../images/icons8-shark.png),rgb(253, 250, 250);/*[11]*/
+}
+
+div.aquater_img{
+  background: url(../images/icons8-aquater.png),rgb(253, 250, 250);/*[12]*/
+}
+
+div.crystal_ballet_img{
+  background: url(../images/icons8-crystal-ballet.png),rgb(253, 250, 250);/*[13]*/
+}
+
+div.ocean_galaxy_img{
+  background: url(../images/icons8-ocean-galaxy.png),rgb(253, 250, 250);/*[14]*/
+}
+
+div.places_to_stay_img{
+  background: url(../images/icons8-hotel.png),rgb(253, 250, 250);/*[15]*/
+}
+
+
+/*change background-color and border-color of map markers based on category of markers such as red for Rides*/
+div.rides_marker{
+  background-color: rgb(223, 12, 12);
+  border: 4px solid rgb(223, 12, 12);
+}
+
+div.ocean_friends_marker{
+  background-color: rgb(54, 15, 146);
+  border: 4px solid rgb(54, 15, 146);
+}
+
+div.aquater_marker{
+  background-color: rgb(0, 128, 0);
+  border: 4px solid rgb(0, 128, 0);
+}
+
+div.crystal_ballet_marker{
+  background-color: rgb(212, 28, 120);
+  border: 4px solid rgb(212, 28, 120);
+}
+
+div.ocean_galaxy_marker{
+  background-color: rgb(255, 69, 0);
+  border: 4px solid rgb(255, 69, 0);
+}
+
+div.places_to_stay_marker{
+  background-color: rgb(128, 0, 128);
+  border: 4px solid rgb(128, 0, 128);
+}
+
+
+/*setting position of each marker on map image*/
+#roller_coaster_marker{
+  top: 10px;
+  left: 530px;
+}
+
+#water_slides_marker{
+  top: 340px;
+  left: 210px;
+}
+
+#jet_ski_marker{
+  top: 260px;
+  left: 150px;
+}
+
+#surf_marker{
+  top: 270px;
+  left: 80px;
+}
+
+#ferris_wheel_marker{
+  top: 200px;
+  left: 770px;
+}
+
+#boat_ride_marker{
+  top: 425px;
+  left: 220px;
+}
+
+#penguin_marker{
+  top: 210px;
+  left: 470px;
+}
+
+#dolphin_marker{
+  top: 130px;
+  left: 600px;
+}
+
+#killer_whale_marker{
+  top: 200px;
+  left: 660px;
+}
+
+#sea_lion_marker{
+  top: 290px;
+  left: 540px;
+}
+
+#shark_marker{
+  top: 200px;
+  left: 560px;
+}
+
+#aquater_marker{
+  top: 250px;
+  left: 340px;
+}
+
+#crystal_ballet_marker{
+  top: 210px;
+  left: 890px;
+}
+
+#ocean_galaxy_marker{
+  top: 100px;
+  left: 520px;
+}
+
+#places_to_stay_marker1{
+  top: 390px;
+  left: 380px;
+}
+
+#places_to_stay_marker2{
+  top: 450px;
+  left: 120px;
+}
+
+/*setting the background color and padding of theme park map's section*/
+.white_background{
+  background-color: #ffffff;
+  padding: 2rem;
+  margin:2rem  auto;
+  width: max-content;
+  height: max-content;
+}
+
+/*changing text properties of span element displayed at the bottom of the image*/
+#cite_icon{
+  float: right;
+  font-size: 0.5rem;
+  color: rgb(128, 128, 128);
+}
+
+/*setting margin of list below the map image*/
+ul.list_below_map{
+  margin: 6rem auto 4rem;
+}
+
+/*setting each list item to be displayed relative to other content on the page*/
+.dropable_list_item{
+ position: relative;
+}
+
+/*displaying the hidden content below its corresponding list item, added a svg circle image infront of list appearing in the hidden content of first list item and moving 
+rest of the content below the hidden content accordingly*/
+.dropdown {
+  box-sizing: border-box;
+ display: none;
+ position: relative;
+ width: 1000px;
+ padding: 1rem;
+ list-style-image: url(../images/circle-bullet.svg);/*[16]*/
+}
+
+/*styling the data term of description list below map image so that it displays in line with the svg image that will be inserted via ::before psuedo-element*/
+.on_hover{
+  display: inline-block;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+/* Show the dropdown content on hover */
+.dropable_list_item:hover  .dropdown {
+ display: block;
+}
+
+/*inserting a right arrow infront of each list item*/
+.on_hover::before{
+  display: inline-block;
+  content:url(../images/right-arrow.svg) ;/*[17]*/
+}
+
+/*changing the right arrow image to down arrow when the data term is hovered*/
+.on_hover:hover::before{
+  display: inline-block;
+  content:url(../images/down-arrow.svg) ;/*[18]*/
+}
+
+/*styling the blockquote which is the part of dropdown content of list item 2: Accessibilty in the park */
+blockquote{
+ text-align: center;
+ font-size: 1.2rem;
+ font-family: "Charm", Georgia, 'Times New Roman', Times, serif;
+}
+
+/*changing the font-size of list that appears when first element of the list appearing below the map image is hovered*/
+.dropdown ul{
+  font-size: 1.2rem;
+}
+
+/*--------------------------------------------------------------*/
+/*CSS styling for Places to Stay*/
+/*styles the name of the hotel*/
+.hotel_h4 {
+  background-color: white;
+}
+
+/*styles the short sentence describing the hotel and the 4 hotel amenities*/
+#places_to_stay {
+  font-family: "EB Garamond",Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: black;
+}
+
+/*displays the 4 hotel amenities as a bullet-list with the bullet shape being a circle*/
+#places_to_stay li {
+  list-style-type: disc;
+}
+
+/*styles the background of the hotel description (sentence and amenities) as white*/
+.hotel_description {
+  background-color: white;
+  padding: 1rem;
+}
+
+/*styles the hotel's phone number*/
+.hotel_description a {
+  background-color: rgba(179,0,0,0.1);
+  display: inline-block;
+  padding: 8px;
+  margin: 2px;
+}
+
+/* styles places to stay section */
+.places_to_stay_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.place_to_stay img {
+  width: 400px;
+  height: 400px;
+}
+
+.place_to_stay {
+  display: inline-block;
+  width: 400px;
+
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 3px 3px 3px #888;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*CITATION FOR IMAGES INSERTED AS VIA CSS*/
+/*
+  [1]: icons8.com, Roller Coaster, [Online], Available: https://icons8.com/icon/8718/roller-coaster [Accessed: 17-Jan-2022]
+  [2]: icons8.com,Water Park, [Online], https://icons8.com/icon/8645/water-park
+  [3]: icons8.com, Jet Ski, [Online],https://icons8.com/icon/74785/jet-ski
+  [4]: icons8.com, Surf, [Online], https://icons8.com/icon/74693/skimboarding
+  [5]: icons8.com, Public Service, [Online], https://icons8.com/icon/Ai4rx298yxrD/external-ferris-wheel-public-service-photo3ideastudio-solid-photo3ideastudio
+  [6]: icons8.com, Sail Boat, [Online], https://icons8.com/icon/9317/sail-boat
+  [7]: icons8.com, Penguin, [Online], https://icons8.com/icon/36293/pinguin
+  [8]: icons8.com, Dolphin Emulator, [Online], https://icons8.com/icon/37258/dolphin-logo
+  [9]: icons8.com, Orca, [Online], https://icons8.com/icon/113934/orca
+  [10]: icons8.com, MariaDB, [Online], https://icons8.com/icon/nrY6pkbRkJCi/maria-db
+  [11]: icons8.com, Shark, [Online], https://icons8.com/icon/gne1NGA3i1EJ/shark-body
+  [12]: icons8.com, Dinner, [Online], https://icons8.com/icon/XFVIThfU3nTF/dinner--v2
+  [13]: icons8.com, Ballet, [Online], https://icons8.com/icon/UVObhgQ7o2Gb/external-ballet-russia-justicon-lineal-justicon
+  [14]: icons8.com, Fish, [Online], https://icons8.com/icon/haw5edTubOKF/external-fish-landscape-vitaliy-gorbachev-fill-vitaly-gorbachev-1
+  [15]: icons8.com, Hotel, [Online], https://icons8.com/icon/10529/5-star-hotel--v2
+  [16]: reshot.com, Circle, [Online], https://www.reshot.com/free-svg-icons/item/circle-23Z87BEMNJ/
+  [17]: reshot.com, Arrow, [Online], https://www.reshot.com/free-svg-icons/item/arrow-chevron-right-WDGHUKQ634/
+  [18]: reshot.com, Arrow, [Online], https://www.reshot.com/free-svg-icons/item/arrow-chevron-down-EUCMLYADT9/ 
+*/
+

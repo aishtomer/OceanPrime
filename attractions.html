@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!--to display the title of page on browsers tab-->
+        <title>Ocean Prime-Home</title>
+    
+        <!--Adding meta tags-->
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a website for a 'Ocean Prime' theme park.">
+        <meta name="author" content="Team-94">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="'Ocean Prime' 'Theme Park' 'Amusement Park' Holidays Ocean Park Fun">
+        
+        <!--adding favicon to the website-->
+        <link rel="shortcut icon" href="images/Ocean Prime Logo - Original - 5000x5000.ico"><!--[1]-->
+
+        <!--Importing Stylesheets to style the page-->
+        <link rel="stylesheet" href="css/attractions.css">
+        <link rel="stylesheet" href="css/common.css">
+    </head>
+    
+    <!--NOTE : Numbers enclosed in the square bracket in inside comment(which appears adjascent to each of the external source embedded
+            on this page), are the reference number of the embedded content in the citations list(present at the bottom of this HTMl code as a comment)-->
+    
+    <body>
+    <!--HEADER-->
+    <header id="site_header">
+            <!--Logo of Theme Park-->
+            <div id="logo">
+                <!--linking theme park logo with home page-->
+                <a href="./index.html">
+                    <img src="images/logo.svg" alt="theme park logo showing a ship on water waves." title="Go to Home Page"><!--[1]-->
+                </a>
+            </div>
+            
+            <!--Theme Park Name and Slogan to be displayed at center of the header-->
+            <div id="park_name_with_tagline">
+                <h1>Ocean Prime</h1>
+                <h2>Crown of Atlantis</h2>
+            </div>
+            
+            <!--Opening Hours Banner to be displayed in top-right corner of the page-->
+            <div id="opening_hrs_banner">
+                <span>Today's opening hours</span>
+                <a href="info.html#opening_hours">View all opening times</a>
+            </div>
+    </header>
+    
+    <!--NAVIGATION BAR-->
+    <nav id="navigation_bar"> 
+        <!--adding the list of options that will be used to navigate through the website-->
+        <ul>
+            <li><a href="index.html" class="main_nav_anchor">Home</a></li>
+            <!--list items with class dropable denote the options on primary navigation bar that have secondary navigation bar attached to it-->
+            <li class="dropable">
+                <a class="main_nav_anchor current_open" href="attractions.html">Our Attractions</a>
+                <!--following div represents the content that will appear as a secondary navigation bar when above link is hovered-->
+                <div class="dropped_content">
+                    <div class="flex_display_content">
+                        <div class="dropped_links">
+                            <!--links present in the secondary navigation bar-->
+                            <a href="attractions.html#rides">Rides for Everyone</a>
+                            <a href="attractions.html#festival_specials">Festival Specials</a>
+                            <a href="attractions.html#meet_ocean_friends">Meet Ocean Friends</a>
+                            <a href="attractions.html#crystal_ballet">Crystal Ballet</a>
+                            <a href="attractions.html#aquater">Aquater</a>
+                            <a href="attractions.html#ocean_galaxy">Ocean Galaxy</a>
+                        </div>
+                        <!--image accompanying the displayed seconadry navigation block-->
+                        <img src="images/animal-performance-penguin-unsplash.jpg" class="sec_nav_img" alt="an image showing 3 penguins dancing."><!--[2]-->
+                    </div>
+                </div>
+            </li>
+            <!--list items with class dropable denote the options on primary navigation bar that have secondary navigation bar attached to it-->
+            <li class="dropable">
+                <a class="main_nav_anchor" href="info.html">Plan Your Visit</a>
+                <!--following div represents the content that will appear as a secondary navigation bar when above link is hovered-->
+                <div class="dropped_content">
+                    <div class="flex_display_content">
+                        <div class="dropped_links">
+                            <!--links present in the secondary navigation bar-->
+                            <a href="info.html#ticket_info">Book Tickets</a>
+                            <a href="info.html#opening_hours">Opening Hours</a>
+                            <a href="info.html#map">Park Map</a>
+                            <a href="info.html#places_to_stay">Places to Stay</a>
+                        </div>
+                        <!--image accompanying the displayed seconadry navigation block-->
+                        <img src="images/sec_nav_plan_visit.jpg" class="sec_nav_img" alt="an image showing entrance view of the theme park where people are moving about."><!--[3]-->
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!--Book Tickets Link that will appear on the right side of the navigation bar-->
+        <a href="info.html#ticket_info" id="book_tickets_btn">Book Tickets</a>
+    </nav>
+
+        <!--Start of Main Content of Attractions Page-->
+        <main>
+            <!--video containing clips representing different attractions that theme park offers -->
+            <div class="vd_container">
+                <!--embedding attractions video with fallback message(in case none of format provided through <source> tag runs on user's browser)-->
+                <video controls poster="images/video-poster-pexel.jpg"> <!--[15] for image inserted through poster attribute-->
+                    <source src="videos/edited-attractions-video.mp4"  type="video/mp4"><!--this edited video consists of parts of video clips [4],[5],[6],[7],[8],[9],[10],[11],[12],[13] and background music [14]-->
+                    <source src="videos/edited-attractions-video.webm" type="video/webm"><!--this edited video consists of parts of video clips [4],[5],[6],[7],[8],[9],[10],[11],[12],[13] and background music [14]-->
+                    Sorry, your browser doesn't support videos.
+                </video>
+            </div>
+
+
+            <!--SECTION 1 : RIDES and FESTIVAL SPECIALS -->
+            <section class="rides_and_festival_specials_class" id="rides_and_festival_specials_id">
+                <!--adding section heading "Rides and Festival Specials"-->
+                <h3>Rides and Festival Specials</h3>
+
+                <!--ATTRACTION 1: RIDES that appears under the "Rides and Festival Specials" heading-->
+                <article id="rides" class="tiled_article tiled_article_odd">
+                    <!--SLIDESHOW implemented by using Animation property, NO JAVASCRIPT-->
+                    <div class="slideshow">
+                    <!--following divs contain the images that will be used in slideshow-->
+                        <div class="slide1 slideshow_img_div"><img src="images/rides-roller-coaster-unsplash.jpg" alt="image of people enjoying on the giant roller coaster." title="Roller Coaster"></div><!--[16]-->
+                        <div class="slide2 slideshow_img_div"><img src="images/rides-water-slide-unsplash.jpg" alt="people enjoying in the pool near water slides." title="Water Slides"></div><!--[17]-->
+                        <div class="slide3 slideshow_img_div"><img src="images/rides-jet-ski-unsplash.jpg" alt="a group of people enjoying the thrill of jet ski." title="Jet Ski"></div><!--[18]-->
+                        <div class="slide4 slideshow_img_div"><img src="images/rides-boat-ride-unsplash.jpg" alt="boat admist the water with a people enjoying the ride." title="Boat Ride"></div><!--[19]-->
+                        <div class="slide5 slideshow_img_div"><img src="images/rides-surfing-pexel.jpg" alt="a group of people surfing during high tide." title="Surfing"></div><!--[20]-->
+                        <div class="slide6 slideshow_img_div"><img src="images/rides-ferris-wheel-unsplash.jpg" alt="a majestic view of ferris wheel in the evening sky." title="Ferris Wheel Ride"></div><!--[21]-->
+                    </div>
+                    <div class="description">
+                        <!--DESCRIPTION WITH HEADING-->
+                        <h4>Rides for Everyone</h4>
+                        <!--short description on attraction-->
+                        <p>
+                            With our high-speed <b>Roller Coasters</b> experience the extraordinary feeling of weightlessness as you dive <em>deeper</em> from  100 feet altitude. Capture memories of spectacular view from the <b>Ferris Wheel</b> as it moves up, taking you to the <em>paradise</em>.
+                            <i>"Silent of the Sea"</i> could be mysterious but at the same time full of
+                            <em>Peace</em> and <em>Beauty</em>, experiance this feeling of <em>Tranquility</em> with our
+                            <b>Boat Ride</b>.
+                        </p>
+                        <!--opening hours for this attraction-->
+                        <p>Opening Hours: 8:00 am to 3:00 pm</p>
+                        <!--types of rides-->
+                        <p>Type of rides: Roller coasters, Water Slides, Jet Ski, Surfing, Ferris Wheel, Boat Ride</p>
+                    </div>
+                </article>
+
+                <!--ATTRACTION 2: FESTIVAL SPECIALS that appears under the "Rides and Festival Specials" heading-->
+                <article id="festival_specials" class="tiled_article tiled_article_even">
+                    <!--SLIDESHOW implemented by using Animation property, NO JAVASCRIPT-->
+                    <div class="slideshow">
+                    <!--following divs contain the images that will be used in slideshow-->
+                        <div class="slide1 slideshow_img_div"><img src="images/festivals-carnival-unsplash.jpg" alt="A group of happy girls dressed in different fantasy characters." title="Carnival"></div><!--[22]-->
+                        <div class="slide2 slideshow_img_div"><img src="images/festivals-christmas-pexel.jpg" alt="View of decorated trees on christmas night." title="Christmas"></div><!--[23]-->
+                        <div class="slide3 slideshow_img_div"><img src="images/festivals-fireworks-unsplash.jpg" alt="Fantastic view of fireworks in New Year's Eve." title="New Year's Eve"></div><!--[24]-->
+                        <div class="slide4 slideshow_img_div"><img src="images/festivals-carnival2-unsplash.jpg" alt="A young man dressed in fancy dress during carnival." title="Carnival"></div><!--[25]-->
+                        <div class="slide5 slideshow_img_div"><img src="images/festivals-christmas-tree-unsplash.jpg" alt="A decorated Christmas Tree." title="Christmas tree"></div><!--[26]-->
+                        <div class="slide6 slideshow_img_div"><img src="images/festivals-concert-unsplash.jpg" alt="People enjoying themeselves at concert." title="Concert"></div><!--[27]-->
+                    </div>
+                    
+                    <div class="description">
+                        <!--DESCRIPTION WITH HEADING-->
+                        <h4>Festival Specials</h4>
+                        <!--short description on attraction-->
+                        <p>
+                            <b><em>Christmas </em></b>and <b><em>New Year's Eve</em></b> are some of most beautiful moments we experiance every year. Make these special days into <b><em>unforgettable</em></b> moments of <i>Happiness</i>
+                            by being part of <em><b>Carnival</b> of Happiness</em>, <em>spectacular</em> <b><i>Fireworks</i></b> and <em>mesmerizing</em> view of park at Chrismas night and New Year's Eve along with <em>live</em> <b>Concert</b>
+                            featuring <em>special musical artists</em>.
+                        </p>
+                        <!--opening hours for this attraction-->
+                        <p> Opening Hours: 11:00 am to 5:00 pm</p>
+                        <!--types of events-->
+                        <p>Types: Merry Christmas, Fireworks, New Year's Eve, Carnival, Concert</p>
+                    </div>
+                </article>
+            </section>
+
+
+
+            <!-- SECTION 2: LIVE PERFORMANCES-->
+            <section class="live_performances_class" id="live_performances">
+                <!--adding section heading "Live Performances"-->
+                <h3>Live Performances</h3>
+
+                <!--ATTRACTION 1: MEET OUR OCEAN FRIENDS that appears under the "Live Performances" heading-->
+                <article id="meet_ocean_friends" class="tiled_article tiled_article_odd">
+                    <!--SLIDESHOW implemented by using Animation property, NO JAVASCRIPT-->
+                    <div class="slideshow">
+                    <!--following divs contain the images that will be used in slideshow-->
+                        <div class="slide1 slideshow_img_div"><img src="images/animal-performance-dolphin1-pexel.jpg" alt="a group of three dolphins with their head above water and showcasing their talent." title="Dolphins"></div><!--[28]-->
+                        <div class="slide2 slideshow_img_div"><img src="images/animal-performance-sealion-unsplash.jpg" alt="a sealion looking upwards with its body arched." title="Sea Lion"></div><!--[29]-->
+                        <div class="slide3 slideshow_img_div"><img src="images/animal-performance-dolphin2-unsplash.jpg" alt="a cute dolphin coming straight out of the water." title="Dolphin"></div><!--[30]-->
+                        <div class="slide4 slideshow_img_div"><img src="images/animal-performance-penguin-unsplash.jpg" alt="a group of three penguins showcasing their talent." title="penguins"></div><!--[31]-->
+                        <div class="slide5 slideshow_img_div"><img src="images/animal-performance-dolphin3-unsplash.jpg" alt="a group of four dolphins diving back intothe water." title="Dolphins"></div><!--[32]-->
+                        <div class="slide6 slideshow_img_div"><img src="images/animal-performance-killer-whales-unsplash.jpg" alt="a group of three orcas showcasing their talent." title="Dolphin"></div><!--[33]-->
+                    </div>
+                    
+                    <div class="description">
+                        <!--DESCRIPTION WITH HEADING-->
+                        <h4>Meet Our Ocean Friends</h4>
+                        <!--short description on attraction-->
+                        <p>
+                            How much are our ocean freinds <i>talented</i>? Curious! Discover some of most 
+                            <em>surprising</em> things that they can do. Watching <b>dolphins</b> through the screen is <em>not</em> bad but what if you could go <em>beyond the screen</em> and watch them not <em>just</em> swim in water but also doing some 
+                            <b><i>dance</i></b> or maybe some <b><i>stunts</i></b>. Discover the hidden talents of <em>not just</em> dolphins but of several
+                            sea animals(<i>which are generally known for their leisure not agility</i>) as you explore assets we have in <em>store for you</em>.
+                        </p>
+                        <!--opening hours for this attraction-->
+                        <p>Opening Hours: 3:00 pm to 5:00 pm</p>
+                        <!--types of animal performances-->
+                        <p>
+                            Types: Dancing Penguins, Appointment with Sharks, Dolphins Adventure, Encounter 
+                            with Killer Whales, Sea Lion Kingdom
+                        </p>
+                    </div>
+                </article>
+
+                <!--ATTRACTION 2: CRYSTAL BALLET that appears under the "Live Performances" heading-->
+                <article id="crystal_ballet" class="tiled_article tiled_article_even">
+                    <!--SLIDESHOW implemented by using Animation property, NO JAVASCRIPT-->
+                    <div class="slideshow" class="tiled_article tiled_article_odd">
+                    <!--following divs contain the images that will be used in slideshow-->
+                        <div class="slide1 slideshow_img_div"><img src="images/ballet1-unsplash.jpg" alt="a ballerina standing at one foot with her arms and legs extending outwards in a stunning way." title="Crystal Ballet"></div><!--[34]-->
+                        <div class="slide2 slideshow_img_div"><img src="images/ballet4-pixabay.jpg" alt="A group of ballerina playing Giselle." title="Crystal Ballet"></div><!--[35]-->
+                        <div class="slide3 slideshow_img_div"><img src="images/ballet3-pexel.jpg" alt="a ballerina performing a move with hers arms extended upwards and one leg behind another." title="Crystal Ballet"></div><!--[36]-->
+                        <div class="slide4 slideshow_img_div"><img src="images/ballet2-unsplash.jpg" alt="a group of ballerinas performing in crystal ballet." title="Crystal Ballet"></div><!--[37]-->
+                        <div class="slide5 slideshow_img_div"><img src="images/ballet5-unsplash.jpg" alt="A pair of ballerina playing Swan dance." title="Crystal ballet"></div><!--[38]-->
+                        <div class="slide6 slideshow_img_div"><img src="images/ballet6-pixabay.jpg" alt="A group of ballerina performing in the stadium." title="Crystal Ballet"></div><!--[39]-->
+                    </div>
+                    </div>
+                    <div class="description">
+                        <!--DESCRIPTION WITH HEADING-->
+                        <h4>Crystal Ballet</h4>
+                        <!--short description on attraction-->
+                        <p>
+                            Enjoy not just a dance but experience some of your favourite characters from our <em>Queen Elsa</em> to beautiful <em>Giselle</em>, by drowning in
+                            the <em>mesmerising</em> performance of talented ballerinas as they sway on the stage, reincarnating the wonders from <b>Swan Lake</b> to <b>Frozen</b>.
+                        </p>
+                        <!--opening hours for this attraction-->
+                        <p>Opening Hours: 7:00 pm to 11:00 pm</p>
+                    </div>
+                </article>
+            </section>
+
+
+
+            <!--SECTION 3 : STEP INTO THE REALM OF OCEAN -->
+            <section class="restaurant_and_aquarium_class" id="restaurant_and_aquarium_id">
+                <!--adding section heading "Step into the Realm of Ocean"-->
+                <h3>Step into the Realm of Ocean</h3>
+
+                <!--ATTRACTION 1: AQUATER that appears under the "Step into the Realm of Ocean" heading-->
+                <article id="aquater"  class="tiled_article tiled_article_odd">
+                    <!--SLIDESHOW implemented by using Animation property, NO JAVASCRIPT-->
+                    <div class="slideshow">
+                    <!--following divs contain the images that will be used in slideshow-->
+                        <div class="slide1 slideshow_img_div"><img src="images/restaurant1-unsplash.jpg" alt="Seaside view of Aquater." title="Aquater"></div><!--[40]-->
+                        <div class="slide2 slideshow_img_div"><img src="images/restaurant2-unsplash.jpg" alt="Underwater passage surrounded by water in Aquater." title="Aquater"></div><!--[41]-->
+                        <div class="slide3 slideshow_img_div"><img src="images/restaurant3-unsplash.jpg" alt="Dining table decorated with food and drinks at Aquater." title="Aquater"></div><!--[42]-->
+                        <div class="slide4 slideshow_img_div"><img src="images/restaurant5-unsplash.jpg" alt="Pool side view of Aquater." title="Aquater"></div><!--[43]-->
+                        <div class="slide5 slideshow_img_div"><img src="images/restaurant4-unsplash.jpg" alt="Dining tables admist beautiful and mysterious water." title="Aquater"></div><!--[44]-->
+                        <div class="slide6 slideshow_img_div"><img src="images/restaurant6-unsplash.jpg" alt="People enjoying drinks at Aquater." title="Aquater"></div><!--[45]-->
+                    </div>
+                    
+                    <div class="description">
+                        <!--DESCRIPTION WITH HEADING-->
+                        <h4>Aquater</h4>
+                        <!--short description on attraction-->
+                        <p>
+                            Experience the feeling of being part of the <em><b>Ocean Kingdom</b></em>. Enjoy delicious marine-theme based food with your family in company 
+                            of your favorite sea creatures from adorable <em><b>Beluga Whale</b></em> and <em><b>Dolphins</b></em> to thrilling 
+                            <em><b>Killer Whales</b></em>.  
+                        </p>
+                        <!--types of featured guests-->
+                        <p>
+                            Featured Guests: Beluga Whale, Great White Sharks, Dolphins, Killer Whales, Green Sea Turtle, Big-Eye Sharks, 
+                            Star Fish, Octopus, Jelly fish 
+                        </p>
+                    </div>
+                </article>
+
+                <!--ATTRACTION 2: OCEAN GALAXY that appears under the "Step into the Realm of Ocean" heading-->
+                <article id="ocean_galaxy" class="tiled_article tiled_article_even">
+                    <!--SLIDESHOW implemented by using Animation property, NO JAVASCRIPT-->
+                    <div class="slideshow">
+                    <!--following divs contain the images that will be used in slideshow-->
+                        <div class="slide1 slideshow_img_div"><img src="images/aquarium1-pexel.jpg" alt="A girl standing infront of large aquarium tank containing variety of fishes in it." title="Aquarium"></div><!--[46]-->
+                        <div class="slide2 slideshow_img_div"><img src="images/aquarium-shark-unsplash.jpg" alt="Shark swimming in a shark tank." title="Shark"></div><!--[47]-->
+                        <div class="slide3 slideshow_img_div"><img src="images/aquarium2-unsplash.jpg" alt="A group of people watching fishes in the aquarium tank." title="Aquarium"></div><!--[48]-->
+                        <div class="slide4 slideshow_img_div"><img src="images/aquarium-turtle-unsplash.jpg" alt="an underwater view of turtle in aquarium." title="Turtle"></div><!--[49]-->
+                        <div class="slide5 slideshow_img_div"><img src="images/aquarium3-unsplash.jpg" alt="A group of people standing infront of the aqurium tank containg large whale." title="Whale"></div><!--[50]-->
+                        <div class="slide6 slideshow_img_div"><img src="images/aquarium4-unsplash.jpg" alt="a family getting amused while watching fishes in aquarium." title="Aquarium"></div><!--[51]-->
+                    </div>
+                    
+                    <div class="description">
+                        <!--DESCRIPTION WITH HEADING-->
+                        <h4>Ocean Galaxy</h4>
+                        <!--short description on attraction-->
+                        <p>
+                            Where is the <em>deepest</em> point of Earth? Ocean? Yes, <em><b>Mariana Trench</b></em> (a part of ocean) is <i>deepest</i> point of Earth. Who lives there? Nobody? Although, it may look
+                            strange, there are some of the most unusual animals found in Mariana Trench like <i>Dumbo Octopus</i>, <i>Angeler Fish</i>, <i>Comb Jelly</i>,etc. At Ocean Galaxy,
+                            experience some of the most unusual inhabitants of vast Ocean Kingdom.
+
+                        </p>
+                        <!--opening hours for this attraction-->
+                        <p>Opening Hours: 8:00 am to 11:00 am</p>
+                        <!--types of species-->
+                        <p>Type of species: Tunas, Jelly Fish, Sharks, Killer Whale, Sea Horse, Starfishes, Perl Oyster, Octopus, Dumbo Octopus, Comb Jellies
+                        , Deep Sea Hatchet Fish, Angelerfish, Pirahna, Blue whale and so much more.</p>
+                    </div>
+                </article>
+            </section>
+
+            <!--ENDING MESSAGE that appears after all the attractions but before the footer-->
+            <div class="quote_background">
+                <div class="ending_message">
+                    <!--ENDING MESSAGE, a blockquote that appears above 'book your day' button in the ending message conatiner-->
+                    <blockquote cite="https://www.countryliving.com/life/inspirational-stories/g36808040/ocean-quotes/?slide=16">“Dance with the waves, move with the sea, let the rhythm of the water set your soul free.”- Christy Ann Martine</blockquote>
+                    
+                    <!--BOOK TICKETS BUTTON that appears below the quote which is the part of ending message container-->
+                    <a href="info.html#ticket_info" id="book_your_day">Book Your Day</a>
+                </div>
+            </div>
+        </main>
+
+
+        <!--FOOTER-->
+        <footer class="site_footer">
+            <div class="footer_navigation">
+                <!--the list of attraction links with heading that will be part of footer-->
+                <ul class="attractions_list">
+                    <!--adding the heading for the list of attractions link-->
+                    <li><h4>Our Attractions</h4></li>
+                    <li>
+                        <!--list of links that will appear under "Our Attractions" heading in the footer-->
+                        <ul>
+                            <li><a href="attractions.html#rides">Rides</a></li>
+                            <li><a href="attractions.html#festival_specials">Festival Specials</a></li>
+                            <li><a href="attractions.html#meet_ocean_friends">Meet Our Ocean Friends</a></li>
+                            <li><a href="attractions.html#crystal_ballet">Crystal Ballet</a></li>
+                            <li><a href="attractions.html#aquater">Aquater</a></li>
+                            <li><a href="attractions.html#ocean_galaxy">Ocean Galaxy</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!--the list of 'plan you visit' page links with heading that will be part of footer-->
+                <ul class="plan_your_visit_list">
+                    <!--adding the heading for the list of 'plan you visit' page links-->
+                    <li><h4>Plan Your Visit</h4></li>
+                    <li>
+                        <!--list of links that will appear under "Plan Your Visit" heading in the footer-->
+                        <ul>
+                            <li><a href="./info.html#ticket_info">Book tickets</a></li>
+                            <li><a href="./info.html#opening_hours">Opening days and times</a></li>
+                            <li><a href="./info.html#map">Map of the Theme Park</a></li>
+                            <li><a href="./info.html#places_to_stay">Places to stay</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!--Contact information list appearing at the footer of the page-->
+                <ul class="contact_us_list">
+                    <!--giving heading to the list containing contact information like email.-->
+                    <li><h4>Contact Us</h4></li>
+                    <li>
+                        <!--list of links that will appear under "Contact Us" heading in the footer-->
+                        <ul>
+                            <li>phone no.: <a href="tel:123457890">123457890</a></li>
+                            <li>email: <a href="mailto:someone@oceanprime.com">someone@oceanprime.com</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!--Location of Theme Park added as a list appearing as a part of footer-->
+                <ul class="theme_park_location_list">
+                    <!--giving heading to the list containing location of "Ocean Prime"(theme park's name)-->
+                    <li><h4>Location of Ocean Prime</h4></li>
+                    <li>
+                        <!--specifying location of theme park as a list-->
+                        <ul>
+                            <li>8684 Ocean Street<br> Miami, Florida<br> 97204<br> USA</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!--Sign up for Newsletter invitation, present as a part of the footer-->
+                <div class="sign_up_area">
+                    <!--giving heading to the invitation-->
+                    <h4>Sign Up for Newsletter</h4> 
+                    <!--adding text that appears under the heading "Sign Up for Newsletter"-->
+                    <span>Sign up for our newsletter to get updates about our attractions, special offers and so much more.</span>
+                    <!--adding a form to facilitate the user to enter his emial address if he wants to subscribe-->
+                    <form action="#">
+                        <input id="your_email_address" type="text" placeholder="enter your email address"> 
+                        <!--adding a subscribe button, which appears as a part of the footer-->
+                        <button id="subscribe_button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!--Copyright notice which will be displayed below the part(with white background) of the footer-->
+            <p class="copyright_notice">&copy; 2021 Ocean Prime. All rights reserved.</p>
+
+            <!--div block to add a background image at the bottom of the footer-->
+            <div class="repeat_border"></div>
+        </footer>
+
+        <!--BUBBLE ANIMATION and GRADIENT that appears in the background-->
+        <div class="bub_bgnd">
+            <!--each of the following div represents the box which will be styled to give the appearance of Bubble-->
+            <div class="bubble bubble1 B_orange"></div>
+            <div class="bubble bubble2 B_blue"></div>
+            <div class="bubble bubble3 B_pink"></div>
+            <div class="bubble bubble4 B_orange"></div>
+            <div class="bubble bubble5 B_green"></div>
+            <div class="bubble bubble6 B_pink"></div>
+            <div class="bubble bubble7 B_violet"></div>
+            <div class="bubble bubble8 B_orange"></div>
+            <div class="bubble bubble9 B_blue"></div>
+            <div class="bubble bubble10 B_violet"></div>
+            <div class="bubble bubble11 B_pink"></div>
+            <div class="bubble bubble12 B_green"></div>
+            <div class="bubble bubble13 B_blue"></div>
+            <div class="bubble bubble14 B_orange"></div>
+            <div class="bubble bubble15 B_green"></div>
+            <div class="bubble bubble16 B_pink"></div>
+            <div class="bubble bubble17 B_violet"></div>
+            <div class="bubble bubble18 B_orange"></div>
+            <div class="bubble bubble19 B_blue"></div>
+            <div class="bubble bubble20 B_pink"></div>
+          </div>
+    </body>
+</html>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--CITATION FOR THE IMAGES AND VIDEO USED ON THIS PAGE-->
+<!--
+    [1]: Zarla.com,Year Published: NA,[Online],Available:https://www.zarla.com/design/wgyhw48mwq6xbj4x86bh/icon/icon [Accessed: 12-Jan-2022]
+    [2]: D.Oyen, 2019, [Online], Available: https://unsplash.com/photos/3Xd5j9-drDA [Accessed: 13-Jan-2022]
+    [3]: I. R. Ona, 2017, [Online], Available: https://unsplash.com/photos/x6QdZQkuroI [Accessed: 13-Jan-2022]
+    [4]: Q. Pixel, 2020, [Online], Available: https://www.pexels.com/video/a-drone-footage-of-an-amusement-park-6115291/ [Accessed: 13-Jan-2022]
+    [5]: S. B, 2020, [Online], Available: https://www.pexels.com/video/people-visits-an-amusement-park-during-christmas-season-3853505/ [Accessed: 13-Jan-2022]
+    [6]: K. L, 2021, [Online], Available: https://www.pexels.com/video/aerial-footage-of-a-roller-coaster-9445928/ [Accessed: 13-Jan-2022]
+    [7]: M. Production,2021, [Online], Available: https://www.pexels.com/video/ballerina-performing-a-choreography-8462228/ [Accessed: 13-Jan-2022]
+    [8]: Z. Georgiev, 2020, [Online], Available: https://www.pexels.com/video/close-up-view-of-sea-lion-swimming-underwater-5607745/ [Accessed: 13-Jan-2022]
+    [9]: T. 2Day, 2020, [Online], Available: https://www.pexels.com/video/dolphins-jumping-out-of-the-water-6345117/ [Accessed: 13-Jan-2022]
+    [10]: T. Elliot, 2021, [Online], Available: https://www.pexels.com/video/a-cute-penguins-on-the-beach-9116153/ [Accessed: 13-Jan-2022]
+    [11]: B. Gibbs, 2019, [Online], Available: https://player.vimeo.com/external/356681749.sd.mp4?s=eb7a8a544e50840e3865da815fded0ea4b32e146&profile_id=139&oauth2_token_id=57447761 [Accessed: 13-Jan-2022] 
+    [12]: Pixabay, 2017, [Online], Available: https://www.pexels.com/video/fireworks-display-at-night-855431/ [Accessed: 13-Jan-2022]
+    [13]: G. Korb, 2020, [Online], Available: https://www.pexels.com/video/a-tree-full-of-christmas-lights-3622210/ [Accessed: 13-Jan-2022]
+    [14]: Ivymusic, Year Published: NA, [Online],Available: https://pixabay.com/music/search/fun%20summer%20tropical/  [Accessed: 13-Jan-2022]
+    [15]: B. Alexandra, 2018, [Online], Available: https://unsplash.com/photos/Mvav3d0Ki2k [Accessed: 13-Jan-2022]
+    [16]: J. Gios, 2021, [Online], Available: https://unsplash.com/photos/M6sDLz3MCmE [Accessed: 13-Jan-2022]
+    [17]: A. Albahrani, 2020, [Online], Available: https://unsplash.com/photos/LbXv-nBS8KE [Accessed: 13-Jan-2022]
+    [18]: L. Gauthier, 2019, [Online], Available: https://unsplash.com/photos/AZijeluagac [Accessed: 13-Jan-2022]
+    [19]: D. Bashchiera, 2018, [Online], Available:https://unsplash.com/photos/hFXZ5cNfkOk [Accessed: 13-Jan-2022]
+    [20]: J. Loiterton, 2020, [Online], Available: https://www.pexels.com/photo/people-surfing-on-sea-waves-4319752/ [Accessed: 13-Jan-2022]
+    [21]: G. Lopater, 2017, [Online], Available:https://unsplash.com/photos/UaUaefoUmZ8 [Accessed: 13-Jan-2022]
+    [22]: Q. Al, 2021, [Online], Available:https://unsplash.com/photos/SDHpS6gbIDk [Accessed: 13-Jan-2022]
+    [23]: Pixabay, 2016, [Online], Available:https://www.pexels.com/photo/portrait-of-happy-girl-with-ice-cream-247891/ [Accessed: 13-Jan-2022]
+    [24]: A. Chauvineau, 2019, [Online], Available:https://unsplash.com/photos/Dn7P1U26ZkE [Accessed: 13-Jan-2022]
+    [25]: R. Wallace, 2018, [Online], Available:https://unsplash.com/photos/X1OK9of41Ho [Accessed: 13-Jan-2022]
+    [26]: E. Mozhvilo, 2020, [Online], Available:https://unsplash.com/photos/bmk4ShEU-_0 [Accessed: 13-Jan-2022]
+    [27]: J. Conner, 2017, [Online], Available:https://unsplash.com/photos/tIr-PWgSYB4 [Accessed: 13-Jan-2022]
+    [28]: C. Grandbois, 2021, [Online], Available:https://www.pexels.com/photo/close-up-shot-of-dolphins-in-an-aquarium-7316200/ [Accessed: 13-Jan-2022]
+    [29]: S. Crain, 2019, [Online], Available:https://unsplash.com/photos/8jk64drEMcw [Accessed: 13-Jan-2022]
+    [30]: R. Smith, 2020, [Online], Available:https://unsplash.com/photos/ixbyBwwv6rk [Accessed: 13-Jan-2022]
+    [31]: D. Oyen, 2019, [Online], Available: https://unsplash.com/photos/3Xd5j9-drDA [Accessed: 13-Jan-2022]
+    [32]: R. Charlie, 2020, [Online], Available:https://unsplash.com/photos/qtHhv2NE1Vo [Accessed: 13-Jan-2022]
+    [33]: L. Driskill, 2021, [Online], Available:https://unsplash.com/photos/6x5VR9UiBMw [Accessed: 13-Jan-2022]
+    [34]: H. Hintze, 2017, [Online], Available:https://unsplash.com/photos/pzgn0feLJwg [Accessed: 13-Jan-2022]
+    [35]: Nikidinov, 2017, [Online], Available:https://pixabay.com/photos/ballet-swan-lake-ballerina-dance-2124650/ [Accessed: 13-Jan-2022]
+    [36]: M. Production, 2021, [Online], Available:https://www.pexels.com/photo/fashion-love-people-woman-8463093/ [Accessed: 13-Jan-2022]
+    [37]: M. Afonso, 2017, [Online], Available:https://unsplash.com/photos/nZU76qWy-T8 [Accessed: 13-Jan-2022]
+    [38]: R. Maharajan, 2020, [Online], Available:https://unsplash.com/photos/j-7qHj6_GKs [Accessed: 13-Jan-2022]
+    [39]: Nikidinov, 2017, [Online], Available:https://pixabay.com/photos/ballet-swan-lake-ballerina-dance-2124652/ [Accessed: 14-Jan-2022]
+    [40]: A. Seth, 2019, [Online], Available:https://unsplash.com/photos/hDbCjHNdF48 [Accessed: 14-Jan-2022]
+    [41]: Z. Spears, 2018, [Online], Available:https://unsplash.com/photos/DcweRpj62Ds  [Accessed: 14-Jan-2022]
+    [42]: A. Kryzhanivskyi, 2021, [Online], Available: https://unsplash.com/photos/hljBIjzKNmI [Accessed: 14-Jan-2022]
+    [43]: F.A. Rodríguez, 2018, [Online], Available:https://unsplash.com/photos/M7GddPqJowg [Accessed: 14-Jan-2022]
+    [44]: S. Khan, 2019, [Online], Available: https://unsplash.com/photos/425b2PhNuHA [Accessed: 14-Jan-2022]
+    [45]: Krakenimages, 2020, [Online], Available: https://unsplash.com/photos/7BpuzmcxlHU [Accessed: 14-Jan-2022]
+    [46]: I.Schnieder, 2016, [Online], Available: https://unsplash.com/photos/0qpPV5nrhwo [Accessed: 14-Jan-2022]
+    [47]: Z.J. Rensburg, 2020, [Online], Available: https://unsplash.com/photos/xnWS0BytVqE [Accessed: 14-Jan-2022]
+    [48]: N. Marfurt, 2021, [Online], Available: https://unsplash.com/photos/0RzzFmq64ek [Accessed: 14-Jan-2022]
+    [49]: J.D. Mar, 2021, [Online], Available: https://unsplash.com/photos/cndYGSgEQ2E [Accessed: 14-Jan-2022]
+    [50]: P. Xu, 2020, [Online], Available: https://unsplash.com/photos/vJZe1Z0fT1c [Accessed: 14-Jan-2022]
+    [51]: T.B. Motivv, 2019, [Online], Available:https://unsplash.com/photos/OYvjvIANSD0 [Accessed: 14-Jan-2022]
+
+-->
