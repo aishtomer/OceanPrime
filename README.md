@@ -1,6 +1,6 @@
 # OceanPrime
 
-A professional website was created for a theme park, showcasing park amenities in a visually appealing and interactive manner. An animated ocean-themed bubble background was incorporated to enhance the user experience.
+A professional website created for a theme park, showcasing park amenities in a visually appealing and interactive manner. An animated ocean-themed bubble background was incorporated to enhance the user experience.
 
 [View Online](https://aishtomer.github.io/OceanPrime/)
 
